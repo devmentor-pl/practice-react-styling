@@ -18,6 +18,17 @@ const themeSettings = {
   alertSuccessColor: "#155724",
   alertSuccessBackgroundColor: "#d4edda",
   alertSuccessBorderColor: "#c3e6cb",
+
+  buttonPrimaryBackgroundColor: "#007bff",
+  buttonPrimaryBorderColor: "#007bff",
+  buttonPrimaryHoverBackgroundColor: "#0069d9",
+  buttonPrimaryHoverBorderColor: "#0062cc",
+  buttonPrimaryActiveBackgroundColor: "#0062cc",
+  buttonPrimaryActiveBorderColor: "#005cbf",
+
+  buttonLgPadding: ".5rem 1rem",
+  buttonLgFontSize: "1.25rem",
+  buttonLgBorderRadius: ".3rem",
 };
 
 const App = () => {
