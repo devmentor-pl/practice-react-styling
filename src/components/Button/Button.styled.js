@@ -1,35 +1,63 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { capitalize } from "./../../utils/utils";
 
-const StyledButton = styled.button`
-  --background-color: ${props =>
-    props.variant && props.theme
-      ? props.theme[`button${capitalize(props.variant)}BackgroundColor`]
-      : "#fff"};
-  --border-color: ${props =>
-    props.variant && props.theme
-      ? props.theme[`button${capitalize(props.variant)}BorderColor`]
-      : "transparent"};
-  --hover-background-color: ${props =>
-    props.variant && props.theme
-      ? props.theme[`button${capitalize(props.variant)}HoverBackgroundColor`]
-      : "#fff"};
-  --hover-border-color: ${props =>
-    props.variant && props.theme
-      ? props.theme[`button${capitalize(props.variant)}HoverBorderColor`]
-      : "transparent"};
-  --padding: ${props =>
-    props.size && props.theme
-      ? props.theme[`button${capitalize(props.size)}Padding`]
-      : "0.375rem 0.75rem"};
-  --font-size: ${props =>
-    props.size && props.theme
-      ? props.theme[`button${capitalize(props.size)}FontSize`]
-      : "1rem"};
-  --border-radius: ${props =>
-    props.size && props.theme
-      ? props.theme[`button${capitalize(props.size)}BorderRadius`]
-      : "0.25rem"};
+const themeToCSS = {
+  variant: {
+    "--background-color": "buttonBackgroundColor",
+    "--border-color": "buttonBorderColor",
+    "--hover-background-color": "buttonHoverBackgroundColor",
+    "--hover-border-color": "buttonHoverBorderColor",
+  },
+  size: {
+    "--padding": "buttonPadding",
+    "--font-size": "buttonFontSize",
+    "--border-radius": "buttonBorderRadius",
+  },
+};
+
+const generateStyles = props => {
+  let styles = "";
+
+  if (props.theme) {
+    for (const propsName in themeToCSS) {
+      if (props[propsName]) {
+        for (const variable in themeToCSS[propsName]) {
+          let themeKey =
+            themeToCSS[propsName][variable] + capitalize(props[propsName]);
+
+          if (propsName === "variant") {
+            if (props.active) {
+              themeKey += "Active";
+            } else if (props.disabled) {
+              themeKey += "Disabled";
+            }
+          }
+
+          styles += `${variable}: ${props.theme[themeKey]};`;
+        }
+      }
+    }
+
+    if (props.disabled) {
+      styles += `
+        opacity: .65;
+      `;
+    }
+  }
+
+  return css`
+    ${styles}
+  `;
+};
+
+const DefaultStyledButton = styled.button`
+  --background-color: #fff;
+  --border-color: transparent;
+  --hover-background-color: #fff;
+  --hover-border-color: transparent;
+  --padding: 0.375rem 0.75rem;
+  --font-size: 1rem;
+  --border-radius: 0.25rem;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -48,6 +76,10 @@ const StyledButton = styled.button`
     background-color: var(--hover-background-color);
     border-color: var(--hover-border-color);
   }
+`;
+
+const StyledButton = styled(DefaultStyledButton)`
+  ${generateStyles}
 `;
 
 export { StyledButton };

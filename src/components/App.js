@@ -19,16 +19,22 @@ const themeSettings = {
   alertSuccessBackgroundColor: "#d4edda",
   alertSuccessBorderColor: "#c3e6cb",
 
-  buttonPrimaryBackgroundColor: "#007bff",
-  buttonPrimaryBorderColor: "#007bff",
-  buttonPrimaryHoverBackgroundColor: "#0069d9",
-  buttonPrimaryHoverBorderColor: "#0062cc",
-  buttonPrimaryActiveBackgroundColor: "#0062cc",
-  buttonPrimaryActiveBorderColor: "#005cbf",
+  buttonBackgroundColorPrimary: "#007bff",
+  buttonBorderColorPrimary: "#007bff",
+  buttonHoverBackgroundColorPrimary: "#0069d9",
+  buttonHoverBorderColorPrimary: "#0062cc",
+  buttonBackgroundColorPrimaryActive: "#0062cc",
+  buttonBorderColorPrimaryActive: "#005cbf",
+  buttonHoverBackgroundColorPrimaryActive: "#0062cc",
+  buttonHoverBorderColorPrimaryActive: "#005cbf",
+  buttonBackgroundColorPrimaryDisabled: "#007bff",
+  buttonBorderColorPrimaryDisabled: "#007bff",
+  buttonHoverBackgroundColorPrimaryDisabled: "#007bff",
+  buttonHoverBorderColorPrimaryDisabled: "#007bff;",
 
-  buttonLgPadding: ".5rem 1rem",
-  buttonLgFontSize: "1.25rem",
-  buttonLgBorderRadius: ".3rem",
+  buttonPaddingLg: ".5rem 1rem",
+  buttonFontSizeLg: "1.25rem",
+  buttonBorderRadiusLg: ".3rem",
 };
 
 const App = () => {
