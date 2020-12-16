@@ -6,6 +6,7 @@ const BreadcrumbItemStyled = styled.li`
     `
         color: #6c757d;
     `}
+
   & + & {
     padding-left: 0.5rem;
   }
