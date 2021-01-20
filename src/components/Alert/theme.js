@@ -1,5 +1,5 @@
 
 export default {
-    primary: {'backgroundColor': '#8AFFFB'},
+    primary: {'backgroundColor': '#cce5ff'},
     secondary: {'backgroundColor': '#BBBFFF'}
 } 
