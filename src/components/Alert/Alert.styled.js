@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const DefaultAlert = styled.div`
-    background-color: #cce5ff;
+    background-color: transparent;
     border-color: #b8daff;
     border-radius: .25rem;
     border: 1px solid transparent;
