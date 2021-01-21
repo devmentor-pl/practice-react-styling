@@ -13,12 +13,6 @@ const BreadcrumbItem = styled.li`
         color: #6c757d;
         content: "/";
     };
-    &>a[testattr] { // jeżeli miałoby zadziałać, to jak to zrobić?
-        background: #007bff;
-    }
-    /* &>a:active {
-        background: #898989;
-    } */
     &>a {
         color: #007bff;
         text-decoration: none;
