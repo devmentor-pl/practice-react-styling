@@ -7,11 +7,12 @@ const Tabs = props => {
     const [isActive, setActive] = useState(initState);
 
     const TabItems = props.children.map((child, index) => {
-        const {eventKey} = child.props
-        if(isActive[eventKey]) {
-            return <Tab key={index} {...child.props} active></Tab> //prawie działa :/ Pomimo ToggleActiveClass() atrybut [active] nie zostaje usunięty z zakładki Profile. Za to stan mi się resetuje po kliknięciu na Contact o_O 
+        const {eventKey} = child.props;
+        const active = isActive[eventKey];
+        if(active) {
+            return <Tab key={index} {...child.props} active={active}></Tab> // Nadal stan komponentu <Tab> nie ulega zmianie zgodnie z funkcją ToggleActiveClass. Po kliknięciu w 'Home' obie zakładki (Home i Profile) otrzymują active: true.
         }
-        return <Tab key={index} {...child.props}></Tab>
+        return <Tab onClick={toggleActiveTabs} key={index} {...child.props}></Tab>
 
     })
 
@@ -26,10 +27,10 @@ const Tabs = props => {
     function toggleActiveTabs(tabKey) {
         const newState = {}
         for(const key in isActive) {
-            if(key === tabKey) {
-                newState[tabKey] = true;
+            if(key === tabKey) { //jeśli właściwość ze stanu nazywa się tak samo jak kliknięty element
+                newState[tabKey] = true; // ustaw state na true
             } else {
-                newState[key] = false
+                newState[key] = false // jeśli się nie nazywa tak samo, ustaw false
             }
         }
         setActive(newState)
@@ -43,7 +44,7 @@ const Tabs = props => {
     })
     return (
         <StyledTabs>
-        <nav onClick={e => toggleActiveTabs(e.target.dataset.eventKey)}>{TabItems}</nav>
+        <nav>{TabItems}</nav>
         <div>{tabItemsContent}</div>
         </StyledTabs>
     )
