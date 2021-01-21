@@ -9,11 +9,7 @@ const Tabs = props => {
     const TabItems = props.children.map((child, index) => {
         const {eventKey} = child.props;
         const active = isActive[eventKey];
-        if(active) {
-            return <Tab key={index} {...child.props} active={active}></Tab> // Nadal stan komponentu <Tab> nie ulega zmianie zgodnie z funkcją ToggleActiveClass. Po kliknięciu w 'Home' obie zakładki (Home i Profile) otrzymują active: true.
-        }
-        return <Tab onClick={toggleActiveTabs} key={index} {...child.props}></Tab>
-
+        return <Tab onClick={toggleActiveTabs} key={index} {...child.props} active={active} ></Tab>
     })
 
     function createInitState(tabs) {
@@ -27,10 +23,10 @@ const Tabs = props => {
     function toggleActiveTabs(tabKey) {
         const newState = {}
         for(const key in isActive) {
-            if(key === tabKey) { //jeśli właściwość ze stanu nazywa się tak samo jak kliknięty element
-                newState[tabKey] = true; // ustaw state na true
+            if(key === tabKey) {
+                newState[tabKey] = true;
             } else {
-                newState[key] = false // jeśli się nie nazywa tak samo, ustaw false
+                newState[key] = false
             }
         }
         setActive(newState)
