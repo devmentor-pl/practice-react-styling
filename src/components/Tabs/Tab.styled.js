@@ -6,6 +6,7 @@ const StyledTab = styled.a`
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
+    margin-bottom: -1px;
 
     &:hover {
         text-decoration: none;
@@ -17,8 +18,7 @@ const StyledTab = styled.a`
         }
     `}
     
-    ${props => props.disabled && css` // nadal reaguje na klikanie x_x
-    // Wg CSSTrics (https://css-tricks.com/how-to-disable-links/) nie powinnam tworzyć linka, jeśli ma być nieaktywny, ale w bootstrapowych elementach jest href='#', więc tak samo zrobiłam tutaj :x 
+    ${props => props.disabled && css`
         color: #6c757d;
         background-color: transparent;
         border-color: transparent;
