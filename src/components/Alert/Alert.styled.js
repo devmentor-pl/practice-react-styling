@@ -10,6 +10,7 @@ import styled from 'styled-components';
     margin-bottom: 1rem;
     padding: .75rem 1.25rem;
     position: relative;
+    
 `
 
 const StyledAlert = styled(DefaultAlert)`

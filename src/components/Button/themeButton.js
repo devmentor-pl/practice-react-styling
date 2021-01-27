@@ -19,5 +19,6 @@ export default {
         line-height: 1.5rem;
         border-radius: .3rem
     `,
+  
  
 } 

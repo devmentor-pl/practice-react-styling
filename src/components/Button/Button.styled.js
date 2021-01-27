@@ -7,7 +7,6 @@ const DefaultButton = styled.button`
     border-radius: .25rem;
     border: 1px solid transparent;
     color: #212529;
-    cursor: pointer;
     display: inline-block;
     font-size: 1rem;
     font-weight: 400;
@@ -17,12 +16,9 @@ const DefaultButton = styled.button`
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     user-select: none;
     vertical-align: middle;
-/*     
-       &:hover {
-       background-color: var(--hover-background-color);
-       border-color: var(--hover-border-color);
-       } */
- `
+
+    
+ ` 
 
     
     function generateStyles(props) {
@@ -36,10 +32,19 @@ const DefaultButton = styled.button`
               && 
                ${props.theme[props.size][key]};
               `
-            }    
+            } 
+            if (props.disabled) {
+                styles += `
+                cursor: pointer;
+                `;
+            }   
+          
+          
         }
         return css `${styles}`
     }
+
+  
 
 
    const StyledButton = styled(DefaultButton)`
