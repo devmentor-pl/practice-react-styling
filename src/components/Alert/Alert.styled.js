@@ -12,7 +12,6 @@ import styled from 'styled-components';
     position: relative;
 `
 
-// `	
 const StyledAlert = styled(DefaultAlert)`
     background-color: ${props =>  props.theme && props.variant ? props.theme[props.variant] : "#D3D3D3"};
 `	
