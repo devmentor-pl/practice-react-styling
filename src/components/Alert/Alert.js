@@ -9,7 +9,6 @@ const Alert = props => {
   
     return (
       <ThemeProvider theme={theme}>
-          
           <StyledAlert variant = "primary" >{props.children}</StyledAlert>
       </ThemeProvider>
       
