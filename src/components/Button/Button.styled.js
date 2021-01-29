@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components';
 
 
-
 const DefaultButton = styled.button`
     background-color: transparent;
     border-radius: .25rem;
@@ -16,11 +15,9 @@ const DefaultButton = styled.button`
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     user-select: none;
     vertical-align: middle;
-
-    
  ` 
 
-    
+      /*to pewnie trzeba jakoś 'odchudzić' ale nie mam pomysłu jak  -> */
     function generateStyles(props) {
     let styles = '';
 
@@ -38,8 +35,6 @@ const DefaultButton = styled.button`
                 cursor: pointer;
                 `;
             }   
-          
-          
         }
         return css `${styles}`
     }

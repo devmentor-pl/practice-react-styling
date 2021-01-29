@@ -46,6 +46,8 @@ export const TabItem = styled.button`
   :focus {
     outline: 0;
   }
+
+ 
 `;
 
 export const Content = styled.div`

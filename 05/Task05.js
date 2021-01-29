@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Card from '../src/components/Card'
 import { Row, Col, Card as RBCard, Button as RBButton } from 'react-bootstrap';
 
 const Task04 = () => {
@@ -19,7 +19,7 @@ const Task04 = () => {
                 </RBCard>
             </Col>
             <Col>
-                Card!
+               <Card/>
             </Col>
         </Row>
     )

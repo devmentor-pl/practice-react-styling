@@ -6,7 +6,7 @@ import { Content, TabsItem, TabItem}  from './Tabs.styled'
 const Tabs = props => {
     const [active, setActive] = useState(0);
 
-    
+
     const handleClick = e => {
       const index = parseInt(e.target.id, 0);
       if (index !== active) {
@@ -18,13 +18,13 @@ const Tabs = props => {
     return (
         <div>
         <TabsItem>
-            <TabItem onClick={handleClick} active={active === 0} id={0}>
+            <TabItem  onClick={handleClick} active={active === 0} id={0}>
            Home
             </TabItem>
             <TabItem onClick={handleClick} active={active === 1} id={1}>
          Profile
             </TabItem>
-            <TabItem disabled nClick={handleClick} active={active === 2} id={2}>
+            <TabItem disabled onClick={handleClick} active={active === 2} id={2}>
         Contact
             </TabItem>
        </TabsItem>
