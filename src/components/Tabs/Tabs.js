@@ -1,113 +1,72 @@
 import React, { useState } from "react";
-import {TabsItem} from './Tabs.styled'
-import Tab from './Tab'
-import Content from './ContentBox'
+import { Content, TabsItem, TabItem}  from './Tabs.styled'
 
 
 
-const Tabs = props => {
+const Tabs = ( ) => {
+
+  const [active, setActive] = useState(0);
+
+
+  const handleClick = e => {
+    const index = parseInt(e.target.id, 0);
+    if (index !== active) {
+      setActive(index);
+    }
+  };
 
 
 
-  const date = [
-    { id: 0, title: "bread", content: "lorem ipsum" },
-    { id: 1, title: "milk", content: "lrgrt" },
-    { id: 2, title: "water", content: "lorrthtem ipsum" }
+  const data = [
+    { id: 0, title: "Home", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+    { id: 1, title: "Profile", content: "Ut enim ad minim veniam, quis nostrud exercitation"},
+    { id: 2, title: "Contact", content: "Sed ut perspiciatis unde omnis iste natus error", disabled: "disabled" }
   ];
 
+    function renderTab() {
+    return  data.map(item => {
+        return (
+          <TabItem
+          onClick={handleClick}
+          active={active === item.id}
+          id={item.id}
+          title={item.title}
+          key={item.id}
+          disabled={item.disabled}>
+            {item.title}
+          </TabItem>
+  
+        )
+      })
+    }
 
-    const [active, setActive] = useState(0);
 
-    const handleClick = e => {
-      const index = parseInt(e.target.id, 0);
-      if (index !== active) {
-        setActive(index);
-      }
-    };
+    function renderContentForTab() {
+    return  data.map(item => {
+        return (
+          <Content
+          active={active === item.id}
+          content={item.content}>
+          {item.content}
+          </Content>
+          
+        )
+      })
+    }
 
 
     return (
-
-
       <nav>
         <TabsItem>
-
-            <Tab
-            onClick={handleClick}
-            active={active===0}
-            id={date[0].id}
-            title={date[0].title}
-            />
-
-      
-            <Tab
-            onClick={handleClick}
-            active={active===1}
-            id={date[1].id}
-            title={date[1].title}
-            />
-            
-        
-            <Tab
-            onClick={handleClick}
-            active={active===2}
-            id={date[2].id}
-            title={date[2].title}
-            disabled
-            />
-
+            {renderTab()}
         </TabsItem>
-          
-       
 
         <>
-          <Content
-          content={date[0].content}
-          active={active === 0}
-          
-          />
-          <Content
-          content={date[1].content}
-          active={active === 1}
-          />
-          <Content
-          content={date[2].content}
-          active={active === 2}
-          />
+         <p> {renderContentForTab()} </p>
         </>
        
-
-
       </nav>
-      //   <nav>
-      //   <TabsItem>
-      //       <TabItem  onClick={handleClick} active={active === 0} id={0}>
-      //      Home
-      //       </TabItem>
-      //       <TabItem onClick={handleClick} active={active === 1} id={1}>
-      //    Profile
-      //       </TabItem>
-      //       <TabItem disabled onClick={handleClick} active={active === 2} id={2}>
-      //   Contact
-      //       </TabItem>
-      //  </TabsItem>
-     
-      //   <>
-      //     <Content active={active === 0}>
-      //       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec ligula faucibus rhoncus.</p>
-      //     </Content>
-      //     <Content active={active === 1}>
-      //       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      //     </Content>
-      //     <Content active={active === 2}>
-      //       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec ligula faucibus rhoncus.</p>
-      //     </Content>
-      //   </>
-     
-      // </nav>
-        
-        
-       
+      
     )
 }
 

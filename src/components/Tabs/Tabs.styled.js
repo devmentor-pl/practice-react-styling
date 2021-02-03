@@ -1,11 +1,13 @@
-import styled, {css} from "styled-components";
+
+ import styled, {css} from "styled-components";
 
 export const TabsItem = styled.div`
   border-bottom: 1px solid #dee2e6;
- 
+  height: 2.8rem;
+  color: black;
 `;
 
-export const StyledTab = styled.button`
+export const TabItem = styled.button`
   z-index: 100;
   border: none;
   outline: block;
@@ -13,7 +15,7 @@ export const StyledTab = styled.button`
   padding: 8px 16px;
   width: 25%;
   position: relative;
-  color: #495057;
+  color: #007bff;	
   color: ${props => (props.disabled ? "#495057" : null)};
   font-size: 1em;
   background-color: white;
@@ -42,7 +44,8 @@ export const StyledTab = styled.button`
 
  
 `
-export const StyledContent = styled.div`
+export const 
+Content = styled.div`
   color: black
   ${props => (props.active ? "" : "display:none")}
   
