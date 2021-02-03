@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyledTitle} from './MainCard.styled'
+import {StyledTitle} from './Index.styled'
 
 
 

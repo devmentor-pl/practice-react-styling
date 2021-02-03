@@ -16,31 +16,28 @@ const DefaultButton = styled.button`
     user-select: none;
     vertical-align: middle;
  ` 
-
-      /*to pewnie trzeba jakoś 'odchudzić' ale nie mam pomysłu jak  -> */
     function generateStyles(props) {
     let styles = '';
 
         if(props.variant && props.theme && props.size) {
       
             for(const key in props.theme[props.variant] && props.theme[props.size]) {
-                styles += `
-              ${props.theme[props.variant][key]} 
-              && 
-               ${props.theme[props.size][key]};
-              `
-            } 
-            if (props.disabled) {
-                styles += `
-                cursor: pointer;
-                `;
+                for(const key in props.theme[props.variant]) {
+                    styles += `
+                  ${props.theme[props.variant][key]} 
+                  `
+                } 
+                for(const key in props.theme[props.size]) {
+                    styles += `
+                  ${props.theme[props.size][key]} 
+                  `
+                } 
+            
             }   
         }
         return css `${styles}`
     }
-
-  
-
+    
 
    const StyledButton = styled(DefaultButton)`
         ${generateStyles}

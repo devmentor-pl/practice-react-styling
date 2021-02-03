@@ -10,8 +10,8 @@ const Breadcrumb = props => {
     return (
         
         <StyledBreadcrumb>
-            <BreadcrumbItem href="www.wp.pl" >Home </BreadcrumbItem>
-            <BreadcrumbItem href="www.o2.pl" >About us </BreadcrumbItem>
+            <BreadcrumbItem href="https://www.wp.pl" >Home </BreadcrumbItem>
+            <BreadcrumbItem href="https://www.o2.pl" >About us </BreadcrumbItem>
             <BreadcrumbItem href="#" active>Portfolio </BreadcrumbItem>
         </StyledBreadcrumb>
        

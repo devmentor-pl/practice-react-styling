@@ -6,6 +6,8 @@ import Task02 from './../../02/Task02';
 import Task03 from './../../03/Task03';
 import Task04 from './../../04/Task04';
 import Task05 from './../../05/Task05';
+import { ThemeProvider } from 'styled-components'
+import theme from '../../src/components/Alert/themeAlert'
 
   
 
@@ -13,6 +15,7 @@ import Task05 from './../../05/Task05';
 const App = () => {
     return (
         <>
+         <ThemeProvider theme={theme}>
            <Container fluid>
                 <Row>
                     <Col>
@@ -27,6 +30,7 @@ const App = () => {
                 <Task04/>
                 <Task05/>
             </Container>
+            </ThemeProvider>
          
         </>
     )

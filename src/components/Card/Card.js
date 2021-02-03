@@ -1,7 +1,7 @@
 import React from 'react';
 import CardImg from './CardImg'
 import CardBody from './CardBody'
-import {StyledCard} from './MainCard.styled'
+import {StyledCard} from './Index.styled'
 
 
 

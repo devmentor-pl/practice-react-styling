@@ -1,7 +1,7 @@
 import React from 'react';
 import CardTitle from './Cardtitle'
 import CardText from './CardText'
-import {StyledCardBody} from './MainCard.styled'
+import {StyledCardBody} from './Index.styled'
 import Button from '../../components/Button'
 
 

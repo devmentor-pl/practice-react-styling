@@ -1,6 +1,6 @@
 import React from 'react';
 import img1 from '../../../assets/img/dog.jpg'
-import {StyledImg} from './MainCard.styled'
+import {StyledImg} from './Index.styled'
 
 
 

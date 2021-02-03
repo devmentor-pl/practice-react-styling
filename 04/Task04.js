@@ -7,7 +7,7 @@ import { Row, Col, Tabs as RBTabs, Tab as RBTab, } from 'react-bootstrap';
 
 
 const Task04 = () => {
-    const [key, setKey] = useState('home');
+
     return (
         <Row>
             <Col>
