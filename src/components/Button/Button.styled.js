@@ -15,16 +15,31 @@ const DefaultStyledButton = styled.button`
 const StyledButton = styled(DefaultStyledButton)`
 	background-color: ${({ theme, variant }) => theme[variant].bgColor};
 	border: ${({ theme, variant }) => `1px solid ${theme[variant].borderColor}`};
-	${({ size = {} }) =>
+	&:hover {
+		background-color: ${({ theme, variant }) => theme[variant].borderColor};
+	}
+	${({ size }) =>
 		size &&
 		css`
 			font-size: ${({ theme }) => theme[size].fontSize};
 			padding: ${({ theme }) => theme[size].padding};
-		`}
-
-	&:hover {
-		background-color: ${({ theme, variant }) => theme[variant].borderColor};
-	}
+		`};
+	${({ active }) =>
+		active &&
+		css`
+			background-color: ${({ theme, variant }) => theme[variant].borderColor};
+			&:focus {
+				box-shadow: 0 0 3pt 2pt ${({ theme, variant }) => theme[variant].bgColor};
+			}
+		`};
+	${({ disabled }) =>
+		disabled &&
+		css`
+			cursor: not-allowed;
+			pointer-events: none;
+			background-color: lavender;
+			border: none;
+		`};
 `;
 
 export { StyledButton };
