@@ -18,6 +18,10 @@ const StyledButton = styled(DefaultStyledButton)`
 	&:hover {
 		background-color: ${({ theme, variant }) => theme[variant].borderColor};
 	}
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 3pt 2pt ${({ theme, variant }) => theme[variant].bgColor};
+	}
 	${({ size }) =>
 		size &&
 		css`
@@ -28,9 +32,6 @@ const StyledButton = styled(DefaultStyledButton)`
 		active &&
 		css`
 			background-color: ${({ theme, variant }) => theme[variant].borderColor};
-			&:focus {
-				box-shadow: 0 0 3pt 2pt ${({ theme, variant }) => theme[variant].bgColor};
-			}
 		`};
 	${({ disabled }) =>
 		disabled &&
