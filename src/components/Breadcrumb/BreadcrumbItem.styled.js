@@ -12,12 +12,13 @@ const StyledBreadcrumbItem = styled.li`
 		display: inline-block;
 		padding-right: 0.5rem;
 	}
-	${({ active }) => {
+	/* nie mogę dociec dlaczego mi to nie działa */
+	/* ${({ active }) => {
 		active &&
 			css`
-				background-color: "red";
+				border: 2px solid goldenrod;
 			`;
-	}}
+	}} */
 `;
 
 export default StyledBreadcrumbItem;
