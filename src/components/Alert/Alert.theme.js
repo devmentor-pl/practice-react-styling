@@ -1,7 +1,7 @@
 export default {
 	primary: {
-		bg: "deepskyblue",
-		border: "royalblue",
+		bg: "#cce5ff",
+		border: "lightblue",
 	},
 	success: {
 		bg: "lightgreen",

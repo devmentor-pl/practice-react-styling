@@ -3,8 +3,7 @@ import { StyledButton } from "./Button.styled";
 import { ThemeProvider } from "styled-components";
 import btnTheme from "./Button.theme";
 
-const Button = (props) => {
-	const { variant, size, active, disabled } = props;
+const Button = ({ variant, size, active, disabled, children }) => {
 	return (
 		<ThemeProvider theme={btnTheme}>
 			<StyledButton
@@ -14,7 +13,7 @@ const Button = (props) => {
 				active={active}
 				disabled={disabled}
 			>
-				{props.children}
+				{children}
 			</StyledButton>
 		</ThemeProvider>
 	);
