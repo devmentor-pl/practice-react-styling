@@ -1,7 +1,7 @@
 export default {
 	primary: {
-		bgColor: "deepskyblue",
-		borderColor: "blue",
+		bgColor: "rgb(0, 123, 255)",
+		borderColor: "rgb(0, 111, 255)",
 	},
 	secondary: {
 		bgColor: "lightcoral",
