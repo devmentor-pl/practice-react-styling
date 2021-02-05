@@ -1,9 +1,10 @@
 import React from 'react';
+import StyledCardImage from './CardImage.styled'
 
-const CardImage = () => {
+const CardImage = ({variant, src}) => {
 
     return (
-        <StyledCardImage>
+        <StyledCardImage src={src} variant={variant}>
         </StyledCardImage>
     )
 }

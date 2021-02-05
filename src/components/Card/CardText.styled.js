@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledCardText = styled.p`
-	background-color: mistyrose;
+	/* some CSS rules */
 `;
 
 export default StyledCardText;

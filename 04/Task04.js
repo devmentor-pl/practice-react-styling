@@ -39,29 +39,25 @@ const Task04 = () => {
 				<Tabs>
 					<Tab eventKey="home" title="Home">
 						<p>
-							1 Vivamus metus nulla, fermentum eget placerat vitae, mollis interdum
-							elit. Pellentesque arcu augue, vulputate ut porttitor ut, suscipit non
-							orci. Integer justo odio, suscipit eget tortor nec, molestie lobortis
-							eros. Nullam commodo elit sit amet lacus blandit aliquet. Mauris at nibh
-							eget nisl pulvinar dignissim.
+							Vivamus metus nulla. Pellentesque arcu augue, vulputate ut porttitor ut,
+							suscipit non orci. Integer justo odio, suscipit eget tortor nec,
+							molestie lobortis eros. Nullam commodo elit sit amet lacus blandit
+							aliquet.
 						</p>
 					</Tab>
 					<Tab eventKey="profile" title="Profile" active>
 						<p>
-							2 Vivamus metus nulla, fermentum eget placerat vitae, mollis interdum
-							elit. Pellentesque arcu augue, vulputate ut porttitor ut, suscipit non
-							orci. Integer justo odio, suscipit eget tortor nec, molestie lobortis
-							eros. Nullam commodo elit sit amet lacus blandit aliquet. Mauris at nibh
-							eget nisl pulvinar dignissim.
+							Nullam commodo elit sit amet lacus blandit aliquet. Mauris at nibh eget
+							nisl pulvinar dignissim. Vivamus metus nulla, fermentum eget placerat
+							vitae, mollis interdum elit. Mauris at nibh eget nisl pulvinar
+							dignissim.
 						</p>
 					</Tab>
 					<Tab eventKey="contact" title="Contact" disabled>
 						<p>
-							3 Vivamus metus nulla, fermentum eget placerat vitae, mollis interdum
-							elit. Pellentesque arcu augue, vulputate ut porttitor ut, suscipit non
-							orci. Integer justo odio, suscipit eget tortor nec, molestie lobortis
-							eros. Nullam commodo elit sit amet lacus blandit aliquet. Mauris at nibh
-							eget nisl pulvinar dignissim.
+							Integer justo odio, suscipit eget tortor nec, molestie lobortis eros.
+							Nullam commodo elit sit amet lacus blandit aliquet. Mauris at nibh eget
+							nisl pulvinar dignissim. Vivamus metus nulla.
 						</p>
 					</Tab>
 				</Tabs>

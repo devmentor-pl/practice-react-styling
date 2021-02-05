@@ -9,7 +9,6 @@ const DefaultStyledButton = styled.button`
 	background-color: yellow;
 	color: white;
 	coursor: pointer;
-	font-size: 1.4em;
 `;
 
 const StyledButton = styled(DefaultStyledButton)`
