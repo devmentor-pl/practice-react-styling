@@ -1,17 +1,14 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const StyledAlert = styled.div`
     display: block;
     padding: .75rem 1.25rem;
     margin-bottom: 1rem;
-    color: #004085;
-    background-color: #cce5ff;
-    border-color: #b8daff;
+    color: ${props => props.theme.color};
+    background-color: ${props => props.theme.backgroundColor};
+    border-color: ${props => props.theme.borderColor};
     border: 1px solid transparent;
     border-radius: .25rem;
-    ${props => props.theme.variant === 'red' && css`
-        background-color: red;
-    `};
 `
 
 export { StyledAlert };

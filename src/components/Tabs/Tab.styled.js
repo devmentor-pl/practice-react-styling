@@ -8,6 +8,7 @@ const StyledTab = styled.li`
     padding: .5rem 1rem;
     text-decoration: none;
     box-sizing: border-box;
+    cursor: grab;
 
     ${props => props.selected && css`
         color: #495057;
@@ -19,6 +20,7 @@ const StyledTab = styled.li`
     
     ${props => props.disabled && css`
         color: #6c757d;
+        cursor: default;
     `};
 `
 
