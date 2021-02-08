@@ -18,16 +18,15 @@ const Tabs = (props) => {
       <Tab
         key={index}
         handleTabChange={handleTabChange}
-        active={active}
+        active={eventKey === activeTab}
         eventKey={eventKey}
         title={title}
         disabled={disabled}
-      ></Tab>
+      />
     );
   });
 
   const renderTabContent = () => {
-    // tutaj jest PROBLEM z propsami bo muszę się przebijać przez wszsytko
     return props.children.map((child, index) => {
       const {
         props: { eventKey, children },
