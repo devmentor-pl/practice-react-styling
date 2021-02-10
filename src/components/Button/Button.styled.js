@@ -17,19 +17,28 @@ const DefaultButton = styled.button`
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 `;
 
-const StyledVariantButton = styled(DefaultButton)(
-  ({ theme, variant, size }) => ({
-    color: `${theme.variants[variant].textColor}`,
-    backgroundColor: `${theme.variants[variant].bgColor}`,
-    borderColor: `${theme.variants[variant].borderColor}`,
-    padding: `${theme.sizes[size].padding}`,
-    fontSize: `${theme.sizes[size].fontSize}`,
-    lineHeight: `${theme.sizes[size].lineHeight}`,
-    borderRadius: `${theme.sizes[size].borderRadius}`,
-  })
+const StyledVariantButton = styled(DefaultButton)(({ theme, variant, size }) =>
+  variant
+    ? {
+        color: `${theme.variants[variant].textColor}`,
+        backgroundColor: `${theme.variants[variant].bgColor}`,
+        borderColor: `${theme.variants[variant].borderColor}`,
+      }
+    : null
 );
 
-const StyledActiveButton = styled(StyledVariantButton)(
+const StyledSizeButton = styled(StyledVariantButton)(({ theme, size }) =>
+  size
+    ? {
+        padding: `${theme.sizes[size].padding}`,
+        fontSize: `${theme.sizes[size].fontSize}`,
+        lineHeight: `${theme.sizes[size].lineHeight}`,
+        borderRadius: `${theme.sizes[size].borderRadius}`,
+      }
+    : null
+);
+
+const StyledActiveButton = styled(StyledSizeButton)(
   ({ theme, variant, active }) =>
     active
       ? {

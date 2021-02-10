@@ -33,9 +33,7 @@ const Task04 = () => {
               filmiki zamieszczone obecnie na Youtube.
             </Card.Text>
             <ThemeProvider theme={themeSettings}>
-              <Button variant='info' size='lg' active>
-                Przejdź dalej!
-              </Button>
+              <Button variant='info'>Przejdź dalej!</Button>
             </ThemeProvider>
           </Card.Body>
         </Card>
