@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { StyledTabs } from './styled/Tabs.styled';
+import { StyledContainer } from './styled/Container.styled';
 import ActiveContext from './context';
 
 const Tabs = (props) => {
@@ -11,7 +12,15 @@ const Tabs = (props) => {
       const TabChild = Tab.props.children;
       const TabText = TabChild.props.children;
       const TabKey = Tab.props.eventKey;
-      return activeElement == TabKey ? <p key={TabKey}>{TabText}</p> : null;
+      return activeElement === TabKey ? (
+        <p key={TabKey} className='active'>
+          {TabText}
+        </p>
+      ) : (
+        <p key={TabKey} className='disabled'>
+          {TabText}
+        </p>
+      );
     });
   };
 
@@ -21,7 +30,7 @@ const Tabs = (props) => {
         <nav>
           <StyledTabs>{props.children}</StyledTabs>
         </nav>
-        <div>{renderChildText(props.children)}</div>
+        <StyledContainer>{renderChildText(props.children)}</StyledContainer>
       </ActiveContext.Provider>
     </>
   );

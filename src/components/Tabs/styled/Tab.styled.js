@@ -32,15 +32,15 @@ export const StyledTab = styled.a`
   ${(props) =>
     props.disabled &&
     css`
-      color: #6c757d;
       background-color: transparent;
       border-color: transparent;
+      color: #6c757d;
       cursor: default;
+      pointer-events: none;
 
       &:hover {
-        color: #6c757d;
-        pointer-events: none;
         border-color: transparent;
+        color: #6c757d;
       }
     `}
 `;

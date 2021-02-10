@@ -4,19 +4,19 @@ import Button from './../src/components/Button';
 import { Row, Col, Button as RBButton } from 'react-bootstrap';
 
 import { ThemeProvider } from 'styled-components';
-import themeSettings from './theme';
+import themeSettings from './../src/components/Button/theme';
 
 const Task02 = () => {
   return (
     <Row>
       <Col>
-        <RBButton variant='primary' size='lg' disabled>
+        <RBButton variant='danger' size='lg' active>
           Button!
         </RBButton>
       </Col>
       <Col>
         <ThemeProvider theme={themeSettings}>
-          <Button variant='primary' size='lg' disabled>
+          <Button variant='danger' size='lg' active>
             Button!
           </Button>
         </ThemeProvider>
