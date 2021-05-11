@@ -15,4 +15,3 @@ Pamiętaj o zdefiniowaniu odpowiedniej struktury plików w `./src/components`, k
 &nbsp;
 
 > :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl)
-
