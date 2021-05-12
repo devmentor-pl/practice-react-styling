@@ -1,31 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import TabItem from "./TabItem";
-
 import { StyledTabs } from "./Tabs.styled";
 
+import TabsContext from "../../context/TabsContext";
+import TabsStateContext from "../../context/TabsStateContext";
+
 const Tabs = (props) => {
-  const initValue = props.children[1].props.children.props.children;
-  const [description, setDescription] = useState(initValue);
+  const [currentItemInState, setCurrentItemInState] = useState("profile");
 
-  const handleClick = (e) => {
-    e.preventDefault();
-
-    const itemArr = props.children.map((item) => item.props.title);
-
-    const descriptionArr = props.children.map(
-      (descrip) => descrip.props.children.props.children
-    );
-
-    for (let i = 0; i < itemArr.length; i++) {
-      if (e.target.innerHTML === itemArr[i]) {
-        setDescription(descriptionArr[i]);
-      }
+  const [current] = React.Children.map(props.children, (child) => {
+    if (child.props.eventKey === currentItemInState) {
+      return child.props.children.props;
     }
-  };
+  });
+
+  const [description, setDescription] = useState(current.children);
+
+  useEffect(() => {
+    setDescription(current.children);
+  }, [currentItemInState]);
+
+  const { Provider: TabsProvider } = TabsContext;
+  const { Provider: TabsStateProvider } = TabsStateContext;
+
   return (
     <>
-      <StyledTabs onClick={handleClick}>{props.children}</StyledTabs>
+      <TabsStateProvider value={currentItemInState}>
+        <TabsProvider value={setCurrentItemInState}>
+          <StyledTabs>{props.children}</StyledTabs>
+        </TabsProvider>
+      </TabsStateProvider>
       <div>{description}</div>
     </>
   );

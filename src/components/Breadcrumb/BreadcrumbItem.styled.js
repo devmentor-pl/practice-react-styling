@@ -10,6 +10,9 @@ const DefaultStyledBreadcrumbItem = styled.li`
     color: #6c757d;
     content: "/";
   }
+  &:first-child::before {
+    display: none;
+  }
 `;
 
 const StyledBreadcrumbItem = styled(DefaultStyledBreadcrumbItem)`

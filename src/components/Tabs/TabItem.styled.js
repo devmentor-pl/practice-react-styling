@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 
 const DefaultStyledTabItem = styled.a`
   display: list-item;
-  color: red;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   background-color: #fff;
@@ -10,12 +9,12 @@ const DefaultStyledTabItem = styled.a`
   padding: 0.5rem 1rem;
   border-radius: 5px 5px 0 0;
   cursor: pointer;
-  z-index: 1;
+  color: blue;
 `;
 
 const StyledTabItem = styled(DefaultStyledTabItem)`
   ${(props) => {
-    const { disabled, item, title } = props;
+    const { disabled, eventKey, state } = props;
 
     if (disabled === true) {
       return {
@@ -24,7 +23,7 @@ const StyledTabItem = styled(DefaultStyledTabItem)`
         pointerEvents: "none",
       };
     }
-    if (title === item) {
+    if (eventKey === state) {
       return {
         borderColor: "#dee2e6 #dee2e6 #ffffff #dee2e6",
       };

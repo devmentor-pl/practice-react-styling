@@ -8,7 +8,6 @@ const DefaultStyledTabs = styled.nav`
   list-style: none;
   border-bottom: 1px solid #dee2e6;
   color: black;
-  z-index: 0;
 `;
 
 const StyledTabs = styled(DefaultStyledTabs)((props) => props.style);

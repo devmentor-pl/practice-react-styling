@@ -2,23 +2,32 @@ import React, { useState } from "react";
 
 import { StyledTabItem } from "./TabItem.styled";
 
+import TabsContext from "../../context/TabsContext";
+import TabsStateContext from "../../context/TabsStateContext";
+
 const TabItem = (props) => {
-  const [item, setItem] = useState("Profile");
+  const { disabled, title, eventKey } = props;
 
-  const handleClick = (e) => {
-    setItem(e.target.innerHTML);
-  };
+  const { Consumer: TabsConsumer } = TabsContext;
+  const { Consumer: TabsStateConsumer } = TabsStateContext;
 
-  const { disabled, title } = props;
   return (
-    <StyledTabItem
-      onClick={handleClick}
-      disabled={disabled}
-      item={item}
-      title={title}
-    >
-      {title}
-    </StyledTabItem>
+    <TabsConsumer>
+      {(setCurrentItemInState) => (
+        <TabsStateConsumer>
+          {(currentItemInState) => (
+            <StyledTabItem
+              onClick={() => setCurrentItemInState(eventKey)}
+              disabled={disabled}
+              eventKey={eventKey}
+              state={currentItemInState}
+            >
+              {title}
+            </StyledTabItem>
+          )}
+        </TabsStateConsumer>
+      )}
+    </TabsConsumer>
   );
 };
 
