@@ -9,7 +9,6 @@ const DefaultStyledTabItem = styled.a`
   padding: 0.5rem 1rem;
   border-radius: 5px 5px 0 0;
   cursor: pointer;
-  color: blue;
 `;
 
 const StyledTabItem = styled(DefaultStyledTabItem)`
@@ -21,11 +20,17 @@ const StyledTabItem = styled(DefaultStyledTabItem)`
         cursor: "default",
         border: "1px solid #fff",
         pointerEvents: "none",
+        color: "#6d6d6d !important",
       };
     }
     if (eventKey === state) {
       return {
         borderColor: "#dee2e6 #dee2e6 #ffffff #dee2e6",
+      };
+    }
+    if (eventKey !== state) {
+      return {
+        color: "#007bff !important",
       };
     }
   }}
