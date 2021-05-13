@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledBreadcrumb = styled.ul`
-  display: block;
+  display: inline-flex;
   background-color: #e9ecef;
   border: none;
   border-radius: 4px;

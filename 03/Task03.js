@@ -2,6 +2,9 @@ import React from "react";
 
 import { Row, Col, Breadcrumb as RBBreadcrumb } from "react-bootstrap";
 import Breadcrumb from "./../src/components/BreadCrumb/Breadcrumb";
+import BreadcrumbItem from "./../src/components/BreadCrumb/BreadcrumbItem";
+import Slash from "./../src/components/BreadCrumb/Slash";
+
 const Task03 = () => {
   return (
     <Row>
@@ -15,7 +18,19 @@ const Task03 = () => {
         </RBBreadcrumb>
       </Col>
       <Col>
-        <Breadcrumb></Breadcrumb>
+        <Breadcrumb>
+          <BreadcrumbItem name={"home"} href={"#"}>
+            Home
+          </BreadcrumbItem>
+          <Slash />
+          <BreadcrumbItem name={"library"} href={"#"}>
+            Library
+          </BreadcrumbItem>
+          <Slash />
+          <BreadcrumbItem name={"data"} href={"#"}>
+            Data
+          </BreadcrumbItem>
+        </Breadcrumb>
       </Col>
     </Row>
   );

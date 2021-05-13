@@ -1,6 +1,5 @@
 import React, { useReducer } from "react";
 import StyledBreadcrumb from "./Breadcrumb.styled";
-import BreadcrumbItem from "./BreadcrumbItem";
 
 const Breadcrumb = (props) => {
   const initialState = {
@@ -25,9 +24,17 @@ const Breadcrumb = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   console.log(state);
+
+  const childrenWithProps = React.Children.map(props.children, (child) => {
+    return React.cloneElement(child, {
+      state: state,
+      dispatch: dispatch,
+    });
+  });
   return (
     <StyledBreadcrumb>
-      <BreadcrumbItem
+      {childrenWithProps}
+      {/*      <BreadcrumbItem
         state={state}
         name={"home"}
         href={"#"}
@@ -49,7 +56,7 @@ const Breadcrumb = (props) => {
       <BreadcrumbItem state={state} name={"data"} dispatch={dispatch}>
         {" "}
         Data
-      </BreadcrumbItem>
+      </BreadcrumbItem> */}
     </StyledBreadcrumb>
   );
 };

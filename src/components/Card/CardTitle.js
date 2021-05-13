@@ -1,7 +1,7 @@
 import React from "react";
 
-const CardTitle = () => {
-  return <h5>Card Title</h5>;
+const CardTitle = (props) => {
+  return <h5>{props.children}</h5>;
 };
 
 export default CardTitle;
