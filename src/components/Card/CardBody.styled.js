@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 const StyledCardBody = styled.div`
-  padding: 20px 0 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 20px;
+  display: block;
 `;
 
 export default StyledCardBody;
