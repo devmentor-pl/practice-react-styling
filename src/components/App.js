@@ -7,26 +7,26 @@ import Task03 from './../../03/Task03';
 import Task04 from './../../04/Task04';
 import Task05 from './../../05/Task05';
 
-
 const App = () => {
-    return (
-        <>
-            <Container fluid>
-                <Row>
-                    <Col>
-                        <h2>Komponenty React Boostrap</h2></Col>
-                    <Col>
-                        <h2>Komponenty Twoje</h2>
-                    </Col>
-                </Row>
-                <Task01/>
-                <Task02/>
-                <Task03/>
-                <Task04/>
-                <Task05/>
-            </Container>
-        </>
-    )
-}
+  return (
+    <>
+      <Container fluid>
+        <Row>
+          <Col>
+            <h2>Komponenty React Boostrap</h2>
+          </Col>
+          <Col>
+            <h2>Komponenty Twoje</h2>
+          </Col>
+        </Row>
+        <Task01 />
+        <Task02 />
+        <Task03 />
+        <Task04 />
+        <Task05 />
+      </Container>
+    </>
+  );
+};
 
 export default App;
