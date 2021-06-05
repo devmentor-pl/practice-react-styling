@@ -1,8 +1,13 @@
 import React from 'react';
+import Card from './../src/components/Card/Card';
+
 
 import { Row, Col, Card as RBCard, Button as RBButton } from 'react-bootstrap';
+import themeSettings from './../src/components/Button/styled/theme';
+import {ThemeProvider} from 'styled-components';
+import Button from '../src/components/Button/Button';
 
-const Task04 = () => {
+const Task05 = () => {
     return (
         <Row>
             <Col>
@@ -19,11 +24,21 @@ const Task04 = () => {
                 </RBCard>
             </Col>
             <Col>
-                Card!
+                <Card>
+	                <Card.Img src="https://picsum.photos/100/80" />
+	                <Card.Body>
+		                <Card.Title>Card Title</Card.Title>
+		                <Card.Text>Some quick example text to build on the card title and make up the bulk of
+			                the card's content.</Card.Text>
+		                <ThemeProvider theme={themeSettings}>
+			                <Button variant="primary" size="sm" active>Go somewhere</Button>
+		                </ThemeProvider>
+	                </Card.Body>
+                </Card>
             </Col>
         </Row>
     )
 }
 
-export default Task04;
+export default Task05;
 

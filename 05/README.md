@@ -6,7 +6,7 @@
 
 
 Nadszedł czas na stworzenie bardziej rozbudowanego elementu, jakim niewątpliwie jest komponent `<Card>`, który składa się z mniejszych elementów tj.:
-* `<Card.Img>`
+* `<Card.CardImg>`
 * `<Card.Body`
 * `<Card.Title>`
 * `<Card.Text>`
