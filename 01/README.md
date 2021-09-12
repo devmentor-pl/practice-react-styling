@@ -16,7 +16,7 @@ Zwróć uwagę, że w lokalizacji `./src/components/Alert` jest kilka plików tj
 * **Alert.styled.js** - wygląd komponentu
 * **index.js** - plik, który importuje zestaw niezbędnych elementów
 
-To te elementy będziesz musiał zmodyfikować, aby w pliku `./01/Task01.js` był renderowane komponenty o poprawnym wyglądzie. 
+To te elementy będziesz musiał zmodyfikować, aby w pliku `./01/Task01.js` był renderowane komponenty o poprawnym wyglądzie.
 
 W tym pliku importujemy komponenty z React Boostrap oraz nasz komponent stworzony przez Ciebie w celu porównania ich wyglądu.
 
