@@ -9,7 +9,7 @@ const DefaultStyledAlert = styled.div`
 
 const StyledAlert = styled(DefaultStyledAlert)(({variant, theme})=> ({
 	backgroundColor: `${theme[variant].backgroundColor}`,
-	color: `${theme[variant].color}`,
+	color: `${theme[variant].paragraphColor}`,
     border: `1px solid ${theme[variant].borderColor}`
 }));
 
