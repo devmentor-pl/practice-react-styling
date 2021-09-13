@@ -1,10 +1,13 @@
 import React from 'react';
 
-import { StyledAlert } from './Alert.styled';
+import { StyledAlert } from './styles/Alert';
 
 const Alert = props => {
+    const { variant } = props;
+    console.log('%cAlert variant: ', 'color:yellowgreen', variant);
+    console.log('%cAlert props.children: ', 'color:yellowgreen', props.children);
     return (
-        <StyledAlert>{props.children}</StyledAlert>
+        <StyledAlert variant={ variant }>{ props.children }</StyledAlert>
     );
 }
 
