@@ -5,6 +5,7 @@ const DefaultStyledButton = styled.button`
     font-weight: 400;
 	border: none;
     border-radius: 0.25rem;
+	padding: 7px;
 
     &:hover {
         filter: brightness(0.9);
