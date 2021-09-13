@@ -1,5 +1,5 @@
 const path = require('path');
-// importuję bibliotękę [path] z [node.js]
+// importuję bibliotekę [path] z [node.js]
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // importuję plugin [html-webpack-plugin]
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -7,20 +7,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = function(env = {}) {
 
     const {production: isProd = false} = env;
-    // w zmiennej [isProd] przechowuje informację
+    // w zmiennej [isProd] przechowuję informację
     // w jakim trybie uruchomić webpack-a
 
     return  {
         entry: './src/app.js',
-        // definiuje plik wejściowy
+        // definiuję plik wejściowy
         mode: isProd ? 'production' : 'development',
-        // definiuje tryb pracy webpack-a
+        // definiuję tryb pracy webpack-a
         devtool: isProd ? 
             'none' : 'eval-cheap-module-source-map',
-        // definiuje identyfikację kodu źródłowego
+        // definiuję identyfikację kodu źródłowego
         output: {
             path: path.resolve(__dirname, 'build'),
-            // definiuje ścieżką wyjściową
+            // definiuję ścieżką wyjściową
             filename: 'app.[hash].js',
             // definiuję nazwę pliku wyjściowego
         },
@@ -71,9 +71,9 @@ module.exports = function(env = {}) {
         plugins: [
             new HtmlWebpackPlugin({
                 template: './src/index.html',
-                // wskazuje plik źródłowy
+                // wskazuję plik źródłowy
                 filename: 'index.html'
-                // określan nazwę dla pliku
+                // określam nazwę dla pliku
             }),
             new CleanWebpackPlugin(),
             // uruchamiam czyszczenie katalogu [build]

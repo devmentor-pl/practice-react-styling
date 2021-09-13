@@ -5,7 +5,7 @@
 # `#04` React: Stylowanie
 
 
-Tym razem naszym zadaniem jest stworzenie komponentów `<Tabs>` oraz `<Tab>`, których przykład działania znajdziesz w dokumentaci [React Boostrap](https://react-bootstrap.github.io/components/tabs/).
+Tym razem naszym zadaniem jest stworzenie komponentów `<Tabs>` oraz `<Tab>`, których przykład działania znajdziesz w dokumentacji [React Boostrap](https://react-bootstrap.github.io/components/tabs/).
 
 Wystarczy, że Twoje rozwiązanie pozwoli definiować dowolną ilość zakładek. Po kliknięciu w którąś z nich zostanie przełączona treść przypisana do wybranej zakładki.
 
