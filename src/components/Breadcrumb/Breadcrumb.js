@@ -23,7 +23,9 @@ const Breadcrumb = (props) => {
                             label={crumb.label}
                             active={crumb.active}
                         />
-                        {index < breadcrumbs.length - 1 && <span>/</span>}
+                        {index < breadcrumbs.length - 1 && (
+                            <span style={{ color: "gray" }}>/</span>
+                        )}
                     </>
                 );
             })}
