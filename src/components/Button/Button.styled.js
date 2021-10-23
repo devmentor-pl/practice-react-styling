@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const activeStyle = css`
+    color: pink;
+`;
 
 const StyledButton = styled.button`
     padding: 0.5rem;
@@ -9,9 +13,7 @@ const StyledButton = styled.button`
     background-color: ${(props) => props.theme.variant.primary};
     width: ${(props) => props.theme.size.big};
 
-    &:active {
-        background-color: ${(props) => props.theme.variant.secondary};
-    }
+    ${(props) => props.active && activeStyle}
 
     &:disabled {
         opacity: 0.5;
