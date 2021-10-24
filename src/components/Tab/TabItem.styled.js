@@ -6,6 +6,8 @@ const activeStyle = css`
     border-left: 1px solid #ccc;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
 
     & > a {
         color: black;
