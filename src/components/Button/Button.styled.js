@@ -9,9 +9,9 @@ const StyledButton = styled.button`
     border-radius: 5px;
     border: none;
     color: white;
-    font-size: 20px;
-    background-color: ${(props) => props.theme.variant.primary};
-    width: ${(props) => props.theme.size.big};
+    font-size: 16px;
+    background-color: ${(props) => props.variant};
+    width: ${(props) => props.size};
 
     ${(props) => props.active && activeStyle}
 

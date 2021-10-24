@@ -18,7 +18,13 @@ const themeSettings = {
 const Button = (props) => {
     return (
         <ThemeProvider theme={themeSettings}>
-            <StyledButton active={false}>{props.children}</StyledButton>
+            <StyledButton
+                active={false}
+                variant={themeSettings.variant.primary}
+                size={themeSettings.size.medium}
+            >
+                {props.children}
+            </StyledButton>
         </ThemeProvider>
     );
 };
