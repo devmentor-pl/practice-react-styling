@@ -9,9 +9,9 @@ const DefaultStyledAlert = styled.div`
 
 const StyledAlert = styled(DefaultStyledAlert)( ({ variant, theme }) => (
     {
-        backgroundColor: theme[variant].backgroundColor,
-        color: theme[variant].color,
-        borderColor: theme[variant].borderColor,
+        backgroundColor: theme.variant[variant].backgroundColor,
+        color: theme.variant[variant].color,
+        borderColor: theme.variant[variant].borderColor,
     })
 )
 
