@@ -7,10 +7,10 @@ const Task01 = () => {
     return (
         <Row>
             <Col>
-                <RBAlert variant="success">Uwaga! <em>Styled Components</em> nadchodzi!</RBAlert>
+                <RBAlert variant="secondary">Uwaga! <em>Styled Components</em> nadchodzi!</RBAlert>
             </Col>
             <Col>
-                <Alert variant="success">Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
+                <Alert variant="secondary">Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
             </Col>
         </Row>
     )

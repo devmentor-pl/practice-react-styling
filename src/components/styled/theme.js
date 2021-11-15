@@ -1,27 +1,27 @@
 export default {
     variant: {
         primary: {
-            color: '#fff',
-            backgroundColor: '#007bff',
-            borderColor: '#007bff',
+            color: '#004085',
+            backgroundColor: '#cce5ff',
+            borderColor: '#b8daff',
             active: {
                 backgroundColor: '#0062cc',
                 borderColor: '#005cbf'
             }
         },
         secondary: {
-            color: '#fff',
-            backgroundColor: '#6c757d',
-            borderColor: '#6c757d',
+            color: '#383d41',
+            backgroundColor: '#e2e3e5',
+            borderColor: '#d6d8db',
             active: {
                 backgroundColor: '#545b62',
                 borderColor: '#4e555b'
             }
         },
         success: {
-            color: '#fff',
-            backgroundColor: '#28a745',
-            borderColor: '#28a745',
+            color: '#155724',
+            backgroundColor: '#d4edda',
+            borderColor: '#c3e6cb',
             active: {
                 backgroundColor: '#1e7e34',
                 borderColor: '#1e7e34',

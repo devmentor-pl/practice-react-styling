@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const DefaultStyledButton = styled.button`
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
     font-size: 1rem;
     padding: .375rem .75rem;
     border-radius: .25rem;
@@ -17,9 +20,6 @@ const DefaultStyledButton = styled.button`
 const StyledButton = styled(DefaultStyledButton)(({ variant, size, theme, disabled, active }) => (
     {
         fontSize: size ? theme.size[size].fontSize : null,
-        color: theme.variant[variant].color,
-        backgroundColor: active ? theme.variant[variant].active.backgroundColor : theme.variant[variant].backgroundColor,
-        borderColor: active ? theme.variant[variant].active.borderColor : theme.variant[variant].borderColor,
         padding: size ? theme.size[size].padding : null,
         borderRadius: size ? theme.size[size].borderRadius : null,
         opacity: disabled ? '.65' : '1'
