@@ -9,14 +9,14 @@ const Tabs = ({ children }) => {
     const onClick = (e, content, eventKey) => {
         e.preventDefault();
         setActiveTab(eventKey);
-        console.log(activeTab)
         setCurrentContent(content);
     }
 
-    const list = children.map(child => {
+    const list = children.map((child, id) => {
         const { title, children, eventKey, disabled } = child.props;
         const { props: { children: kids } } = children;
         return <NavItem
+                key={ id }
                 href="#"
                 title={ title }
                 active={ activeTab === eventKey }
