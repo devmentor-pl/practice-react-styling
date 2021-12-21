@@ -5,8 +5,8 @@ import themeSettings from './theme'
 
 const Button = props => {
     return (
-        <ThemeProvider theme = {themeSettings}>
-            <StyledButton active ={false}>{props.children}</StyledButton>
+        <ThemeProvider theme = {themeSettings.variant.primary}>
+            <StyledButton active = {false} size="lg">{props.children}</StyledButton>
         </ThemeProvider>
     )
 }
