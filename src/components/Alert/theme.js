@@ -1,5 +1,5 @@
 export default {
-    colorAlfa: '#CCE5FF',
-    colorBeta: '#b8daff', 
-    colorGamma: '#004085'
+    colorBackground: '#CCE5FF',
+    colorBorder: '#b8daff', 
+    colorFonts: '#004085'
 }
