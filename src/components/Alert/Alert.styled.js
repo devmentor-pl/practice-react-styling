@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 const DefaultStyledAlert = styled.div`
     --color-alfa: ${props=>props.theme.colorAlfa};
