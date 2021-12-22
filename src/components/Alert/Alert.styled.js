@@ -15,4 +15,4 @@ const DefaultStyledAlert = styled.div`
 
 const StyledAlert = styled(DefaultStyledAlert)(props=> props.style); 
 
-export { StyledAlert };
+export { StyledAlert }; 

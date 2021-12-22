@@ -1,19 +1,22 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import { ThemeProvider } from 'styled-components';
+import {StyledBreadcrumb} from './Breadcrumb.styled'
 import themeSettings from './theme'
+import { BreadcrumbItem } from './BreadcrumbItem';
 
 const breadcrumbsList = [
-    {name: 'Home', href: '#'},
-    {name: 'Library', href: 'https://getbootstrap.com/docs/4.0/components/breadcrumb/'},
-    {name: 'Data', active: true}
+    {name: 'Home', href: '#', active: true},
+    {name: 'Library', href: 'https://getbootstrap.com/docs/4.0/components/breadcrumb/', active: true},
+    {name: 'Data', active: false}
 ]
 
-const Breadcrumb = props => {
+const Breadcrumb = () => {
     return (
-        <ThemeProvider theme = {themeSettings}> {
-            <nav> <ul>{breadcrumbsList.map(({name, href, active}) => <li >{name}</li>)}</ul> </nav>
-        }
+        <ThemeProvider theme = {themeSettings}>
+            <StyledBreadcrumb>
+                {breadcrumbsList.map((item) => <BreadcrumbItem data= {item}/>)}
+            </StyledBreadcrumb>
         </ThemeProvider>
     )
 }
