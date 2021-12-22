@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { v4 as uuid } from 'uuid';
 import { ThemeProvider } from 'styled-components';
 import {StyledBreadcrumb} from './Breadcrumb.styled'
 import themeSettings from './theme'
@@ -15,7 +15,7 @@ const Breadcrumb = () => {
     return (
         <ThemeProvider theme = {themeSettings}>
             <StyledBreadcrumb>
-                {breadcrumbsList.map((item) => <BreadcrumbItem data= {item}/>)}
+                {breadcrumbsList.map((item) => <BreadcrumbItem key= {uuid()} data= {item}/>)}
             </StyledBreadcrumb>
         </ThemeProvider>
     )
