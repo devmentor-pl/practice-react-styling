@@ -5,35 +5,35 @@ import {StyledTabs} from './Tabs.styled'
 import themeSettings from './theme'
 import { Tab } from './Tab';
 import { TabContent } from './TabContent';
-import { StyledTabContent } from './TabContent.styled';
-
-// zastanawiałam się czy taki dane nie lepiej przechowywać w odrębnym pliku?
-// const [marked, setMarked] = useState()
 
 const TabsList = [  
-    {name: 'Home', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec ligula faucibus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;', marked: true },
-    {name: 'Profile', text: 'Donec dignissim ultricies felis, eu dictum eros congue in. In gravida lobortis libero nec tempus. Cras rutrum nisl ut leo volutpat rhoncus. Nulla massa nulla, viverra hendrerit laoreet at, tincidunt eu lacus.', marked: false},
+    {name: 'Home', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec ligula faucibus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;'},
+    {name: 'Profile', text: 'Donec dignissim ultricies felis, eu dictum eros congue in. In gravida lobortis libero nec tempus. Cras rutrum nisl ut leo volutpat rhoncus. Nulla massa nulla, viverra hendrerit laoreet at, tincidunt eu lacus.'},
     {name: 'Contact', text: 'Donec dignissim ultricies felis, eu dictum eros congue in. In gravida lobortis libero nec tempus. Cras rutrum nisl ut leo volutpat rhoncus. Nulla massa nulla, viverra hendrerit laoreet at, tincidunt eu lacus.', disabled:  true}
 ]
+const defaultActive = 'Home';
 
 const Tabs = () => {
+    const [activeTab, setActiveTab] = useState(defaultActive);
+
     const handleClick = (e) => {
         e.preventDefault();
-        console.log(e.target);
+        if(e.target.tagName === 'A') {
+            setActiveTab(e.target.name);
+        }
     }
-
-    const [marked, setMarked] = useState();
     return (
         <ThemeProvider theme = {themeSettings}>
-            <StyledTabs>
+            <StyledTabs onClick = {(e) => handleClick(e)}>
                 {TabsList.map((item) =>{
-                   const {name, disabled, marked} = item;
-                   return  <Tab key= {uuid()} name= {name} disabled= {disabled} marked ={marked} onClick = {(e) => handleClick(e)}/>
+                   const {name, disabled} = item;
+                   return  <Tab key= {uuid()} name= {name} disabled= {disabled} active = {name===activeTab}/>
                 })}
             </StyledTabs>
-            <StyledTabContent> 
-                {TabsList.map((item) => <TabContent key= {uuid()} data= {item}/>)} 
-            </StyledTabContent>
+            {TabsList.map((item) => {
+                const {text, name} = item;
+                return <TabContent key= {uuid()} text= {text} active = {name===activeTab}/>
+            })} 
         </ThemeProvider>
     )
 }

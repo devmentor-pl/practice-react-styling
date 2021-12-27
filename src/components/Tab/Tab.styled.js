@@ -17,7 +17,7 @@ const DefaultStyledTab  = styled.li`
         margin: 0;
         padding: 0.5rem 1rem;
         color: ${props=> 
-            (props.marked) && css`black`
+            (props.active) && css`black`
         }
     }
     
@@ -27,13 +27,13 @@ const DefaultStyledTab  = styled.li`
 
     &:hover {
         ${props=> 
-            (!props.marked & props.active) && css`
+            (!props.active & props.active) && css`
             border-color: var(--color-alfa)`
         }
     }
    
-    ${props=> 
-        props.marked && css`
+    ${props=>
+        props.active && css`
         border-color: var(--color-alfa);
         border-bottom-color: white;
         `

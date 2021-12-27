@@ -2,10 +2,11 @@ import React from 'react';
 
 import { StyledTab } from './Tab.styled';
 
-const Tab = ({name, disabled, marked}) => {
+const Tab = ({name, disabled, active}) => {
+
     return (
-        <StyledTab marked = {marked}> 
-         { !disabled ? <a href ="#">{name}</a> : <p href ="#">{name}</p>}
+        <StyledTab active ={active}> 
+         { !disabled ? <a href ="#" name={name}>{name}</a> : <p href ="#">{name}</p>}
         </StyledTab>
     )
 }
