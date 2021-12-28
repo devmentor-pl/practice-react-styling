@@ -1,7 +1,14 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const StyleTitle = styled.h5`
+    margin-bottom: .75rem;
+`
 
 const CardTitle = () => {
-    return <h5>Card Title</h5>
+    return (
+        <StyleTitle>Card Title</StyleTitle>
+    )
 }
 
 export default CardTitle;
