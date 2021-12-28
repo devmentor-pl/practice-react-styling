@@ -6,7 +6,7 @@ const DefaultStyledButton = styled.button`
     --color-gamma: ${props=>props.theme.colorShadow};
     display: inline-block;
     padding: .4rem 0.75rem;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     border: 1px solid var(--color-alfa);
     border-radius: 0.3rem;
     background-color: var(--color-alfa);
