@@ -17,12 +17,9 @@ const Tabs = () => {
     const [activeTab, setActiveTab] = useState(defaultActive);
 
     const handleClick = (item) => {
-        console.log(item)
-        // if(e.target.tagName === 'A') {
-        //     setActiveTab(e.target.name);
-        // }
+        setActiveTab(item.name);
     }
-    
+
     return (
         <ThemeProvider theme = {themeSettings}>
             <StyledTabs>
