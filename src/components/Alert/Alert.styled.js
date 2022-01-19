@@ -10,6 +10,10 @@ const DefaultStyledAlert = styled.div`
 	border-radius: 0.25rem;
 `;
 
-const StyledAlert = styled(DefaultStyledAlert)``;
+const StyledAlert = styled(DefaultStyledAlert)`
+	color: ${(props) => props.theme[props.variant].color};
+	background-color: ${(props) => props.theme[props.variant].backgroundColor};
+	border-color: ${(props) => props.theme[props.variant].borderColor};
+`;
 
 export { StyledAlert };
