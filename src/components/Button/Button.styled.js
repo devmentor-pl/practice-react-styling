@@ -10,6 +10,7 @@ const DefaultStyledButton = styled.button`
   --fontSize: 1rem;
   --borderRadius: 0.25rem;
   --opacity: 1;
+  --focusShadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
   cursor: pointer;
   color: var(--color);
   display: inline-block;
@@ -32,6 +33,13 @@ const DefaultStyledButton = styled.button`
   opacity: var(--opacity);
 
   &:hover {
+    background-color: var(--bgHover);
+    border-color: var(--borderHover);
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: var(--focusShadow);
     background-color: var(--bgHover);
     border-color: var(--borderHover);
   }
