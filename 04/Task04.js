@@ -38,11 +38,32 @@ const Task04 = () => {
 			</Col>
 			<Col>
 				<Tabs>
-					<Tab title="home">home description</Tab>
-					<Tab title="profile">profile description</Tab>
-					<Tab title="contact" disabled>
-						contact description
+					<Tab
+						content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+							condimentum lacus nec ligula faucibus rhoncus. Vestibulum ante
+							ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+							Curae"
+						title="home"
+					>
+						<p></p>
 					</Tab>
+					<Tab
+						content="Donec dignissim ultricies felis, eu dictum eros congue in. In
+							gravida lobortis libero nec tempus. Cras rutrum nisl ut leo
+							volutpat rhoncus. Nulla massa nulla, viverra hendrerit laoreet at,
+							tincidunt eu lacus."
+						title="profile"
+					></Tab>
+					<Tab
+						content="
+							Vivamus metus nulla, fermentum eget placerat vitae, mollis
+							interdum elit. Pellentesque arcu augue, vulputate ut porttitor ut,
+							suscipit non orci. Integer justo odio, suscipit eget tortor nec,
+							molestie lobortis eros. Nullam commodo elit sit amet lacus blandit
+							aliquet. Mauris at nibh eget nisl pulvinar dignissim."
+						title="contact"
+						disabled
+					></Tab>
 				</Tabs>
 			</Col>
 		</Row>

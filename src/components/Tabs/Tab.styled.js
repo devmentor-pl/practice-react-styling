@@ -13,7 +13,7 @@ const StyledTab = styled.a`
 		border-color: #e9ecef #e9ecef #dee2e6;
 		${(props) => props.disabled && 'border-color: transparent;'}
 	}
-	${(props) => (props.disabled ? 'opacity: 0.5; cursor: default' : '')}
+	${(props) => (props.disabled ? 'opacity: 0.5; cursor: not-allowed;' : '')}
 
 	&:active {
 		color: #495057;
