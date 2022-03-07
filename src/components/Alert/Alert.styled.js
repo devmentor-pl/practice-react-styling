@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const defaultAlert = styled.div`
+const DefaultAlert = styled.div`
     display: block;
     margin-bottom: 1rem;
     padding: 0.75rem 1.25rem;
 `;
 
-const StyledAlert = styled(defaultAlert)`
+const StyledAlert = styled(DefaultAlert)`
     background-color: ${({ theme, variant = 'primary' }) => theme.color[variant].bg};
     border-radius: ${({ theme }) => theme['border-radius']};
     border: 1px solid ${({ theme, variant = 'primary' }) => theme.color[variant].border};
