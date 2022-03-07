@@ -41,6 +41,10 @@ export default {
             border: '#bcbebf',
             color: '#141619',
         },
+        link: {
+            main: '#007bff',
+            dark: '#0056b3',
+        },
     },
     btn: {
         color: {
