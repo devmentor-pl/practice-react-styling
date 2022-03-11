@@ -24,9 +24,7 @@ const App = () => {
             <h2>Komponenty Twoje</h2>
           </Col>
         </Row>
-        <ThemeProvider theme={themeSettings}>
-          <Task01 />
-        </ThemeProvider>
+        <Task01 />
         <Task02 />
         <Task03 />
         <Task04 />

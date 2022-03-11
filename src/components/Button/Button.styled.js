@@ -27,13 +27,12 @@ const StyledButton = styled.button`
     `}
 
   ${(props) =>
-    (props.variant =
-      'secondary' &&
-      props.active &&
-      css`
-        background-color: #565e64;
-        border-color: #51585e;
-      `)}
+    props.variant === 'secondary' &&
+    props.active &&
+    css`
+      background-color: #565e64;
+      border-color: #51585e;
+    `}
 
   ${(props) =>
     props.disabled &&
