@@ -1,3 +1,3 @@
-import Button from './Alert';
+import Button from './Button';
 
 export default Button;
