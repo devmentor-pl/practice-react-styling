@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import StyledTabs from './Tabs.styled';
-import { Header, Title } from './Header.styled';
+import Navigation from './Navigation.styled';
+import Title from './Title.styled.js';
 
 const Tabs = ({ defaultActiveKey = '', children }) => {
     const [eventKey, setEventKey] = useState('');
@@ -26,10 +26,10 @@ const Tabs = ({ defaultActiveKey = '', children }) => {
     };
 
     return (
-        <StyledTabs>
-            <Header>{renderTitles()}</Header>
-            <main>{renderContent(eventKey)}</main>
-        </StyledTabs>
+        <div>
+            <Navigation>{renderTitles()}</Navigation>
+            <p>{renderContent(eventKey)}</p>
+        </div>
     );
 };
 
