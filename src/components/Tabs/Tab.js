@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tab = ({ children }) => {
-    return <div>{children}</div>;
+    return <>{children}</>;
 };
 
 Tab.propTypes = {
