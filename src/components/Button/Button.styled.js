@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 const DefaultStyledButton = styled.button`
     background-color: black;
@@ -11,37 +11,16 @@ const DefaultStyledButton = styled.button`
     &:hover {
         opacity: 0.7;
     }
-    &:disabled {
-        color: grey;
+    /* &:disabled {
+        background-color: grey;
         opacity: 0.7;
         cursor: default;
-  }
+    } */
 `
-const StyledVariantButton = styled(DefaultStyledButton)`
-    ${(props)=> {
-        const {variant} = props;
-        if(variant === 'primary'){
-            return props.theme.primaryBtn
-        }
-        if(variant === 'success'){
-            return props.theme.successBtn
-        }
-        return null;
-    }}
-`;
-
-const StyledButton = styled(StyledVariantButton)`
-    ${(props)=> {
-        const {size} = props;
-        if(size === 'lg'){
-            return props.theme.largeBtn
-        }
-        if(size === 'sm'){
-            return props.theme.smallBtn
-        }
-        return null;
-    }}
-`;
-
-
+const StyledButton = styled(DefaultStyledButton)`
+    ${(props)=>props.theme.buttons[props.variant]};
+    ${(props)=>props.theme.buttonsSizes[props.size]};
+    background:${(props)=> props.active ? props.theme.buttonsActive[props.variant] : null};
+    opacity:${(props)=>props.disabled ? .55 : null}; // to opacity mi nie działa jak mam wyzej odkomentowane style, nie powinno nadpisac?
+`
 export {StyledButton};
