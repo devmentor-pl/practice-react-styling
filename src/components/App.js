@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import {ThemeProvider} from 'styled-components';
-import themeSettings from './styled/theme.js';
+import themeSettings from '../styled/theme.js';
+console.log(themeSettings);
 
 import Task01 from './../../01/Task01';
 import Task02 from './../../02/Task02';
@@ -14,6 +15,7 @@ import Task05 from './../../05/Task05';
 const App = () => {
     return (
         <>
+            <ThemeProvider theme={themeSettings}>
             <Container fluid>
                 <Row>
                     <Col>
@@ -23,14 +25,13 @@ const App = () => {
                         <h2>Komponenty Twoje</h2>
                     </Col>
                 </Row>
-                <ThemeProvider theme={themeSettings}>
-                    <Task01/>
-                </ThemeProvider>
+                <Task01/>
                 <Task02/>
                 <Task03/>
                 <Task04/>
                 <Task05/>
             </Container>
+            </ThemeProvider>
         </>
     )
 }
