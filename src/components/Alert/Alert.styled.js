@@ -7,22 +7,12 @@ const DefaultStyledAlert = styled.div`
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
-    background-color: #c5aeb4; 
+    background-color: #c5aeb4;
+    border-color: #9d8b90;
 `
 
 const StyledAlert = styled(DefaultStyledAlert)`
-    ${(props)=> {
-        const {variant} = props;
-        if(variant === 'info'){
-            console.log(props.theme.primary)
-            return props.theme.primary
-        }
-        if(variant === 'error'){
-            console.log(props.theme.danger)
-            return props.theme.danger
-        } // tych ifów mozna robić w nieskonczoność, jest na to lepsze rozwiązanie?
-        return null;
-    }}
+    ${(props)=>props.theme.alerts[props.variant]};
 `;
 
 export { StyledAlert };
