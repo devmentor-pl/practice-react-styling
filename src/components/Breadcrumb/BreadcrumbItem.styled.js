@@ -26,4 +26,4 @@ const StyledBreadcrumbItem = styled.li`
 `;
 
 
-export {StyledBreadcrumbItem}
+export {StyledBreadcrumbItem};
