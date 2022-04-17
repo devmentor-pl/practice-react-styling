@@ -12,8 +12,7 @@ const DefaultStyledButton = styled.button`
         opacity: 0.7;
     }
     /* &:disabled {
-        background-color: grey;
-        opacity: 0.7;
+        opacity: .7;
         cursor: default;
     } */
 `
@@ -21,6 +20,8 @@ const StyledButton = styled(DefaultStyledButton)`
     ${(props)=>props.theme.buttons[props.variant]};
     ${(props)=>props.theme.buttonsSizes[props.size]};
     background:${(props)=> props.active ? props.theme.buttonsActive[props.variant] : null};
-    opacity:${(props)=>props.disabled ? .55 : null}; // to opacity mi nie działa jak mam wyzej odkomentowane style, nie powinno nadpisac?
+    opacity:${(props)=>props.disabled ? .55 : null}; // to opacity mi nie działa jak mam wyzej odkomentowane style, &:disabled nie powinno nadpisac?
 `
+
 export {StyledButton};
+
