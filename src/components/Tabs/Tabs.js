@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 import { StyledNav,StyledSpan } from './Tabs.styled';
-
 
 const Tabs = props => {
     const {children,defaultActiveKey} = props;
@@ -11,7 +11,7 @@ const Tabs = props => {
 
     function renderTitle(){
         return childList.map((child) => {
-            return <StyledSpan 
+            return <StyledSpan
                 href="#"
                 key={child.eventKey}
                 active={activeTab === child.eventKey}
@@ -43,3 +43,8 @@ const Tabs = props => {
 }
 
 export default Tabs;
+
+Tabs.propTypes = {
+    children: PropTypes.node.isRequired,
+    defaultActiveKey: PropTypes.string.isRequired,
+}

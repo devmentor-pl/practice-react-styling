@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {StyledBreadcrumbItem} from './BreadcrumbItem.styled';
 
@@ -10,3 +11,10 @@ const BreadcrumbItem = props =>{
 }
 
 export default BreadcrumbItem;
+
+
+BreadcrumbItem.propTypes = {
+    children: PropTypes.node.isRequired,
+    href: PropTypes.string,
+    active: PropTypes.bool,
+}

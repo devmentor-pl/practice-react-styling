@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { StyledAlert } from './Alert.styled';
 
@@ -10,3 +11,7 @@ const Alert = props => {
 }
 
 export default Alert;
+
+Alert.propTypes = {
+    variant:PropTypes.string
+}
