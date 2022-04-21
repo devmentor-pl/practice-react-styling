@@ -4,13 +4,9 @@ const StyledBreadcrumbItem = styled.li`
     padding-left: 0.5rem;
 
     a {
-        color: #007bff;
+        color: ${(props)=> props.active ? '#6c757d' : `#007bff`};
         text-decoration: none;
         background-color: transparent;
-    }
-
-    a {
-        color:${(props)=> props.active ? '#6c757d' : null};
     }
 
     &:first-child::before {
