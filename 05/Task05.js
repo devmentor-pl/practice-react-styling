@@ -29,7 +29,7 @@ const Task05 = () => {
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                         </CardText>
-                        <Button variant="success">Go somewhere</Button> 
+                        <Button variant="success" style={{margin:'0 0'}}>Go somewhere</Button> 
                     </CardBody>
                 </Card>
             </Col>
