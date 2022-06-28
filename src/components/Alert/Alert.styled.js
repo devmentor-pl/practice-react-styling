@@ -1,17 +1,19 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
-const StyledAlert = styled.div`
+const DefaultStyledAlert = styled.div`
     display: block;
     padding: 13px;
     border-radius: 4px;
-    border: 1px solid #B8DAFF;
-    background-color: #CCE5FF;
-    color: #06357A;
-    ${ props => props.variant === 'secondary' && css`
-        background-color: #D3D6D8;
-        border: #D1E7DD;
-        color: #41464B;
-        `}
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    color: #000000;;
+`
+
+const StyledAlert = styled(DefaultStyledAlert)`
+    ${(props) => {
+        const {variant} = props;
+        return props.theme[variant]
+    }}
 `
 
 export { StyledAlert };
