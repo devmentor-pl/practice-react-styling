@@ -12,14 +12,14 @@ const Task01 = () => {
                 <RBAlert variant="primary">Uwaga! <em>Styled Components</em> nadchodzi!</RBAlert>
             </Col>
             <ThemeProvider theme={themeSettings}>
-                <Col>
+            {/* <Col>
                     <Alert>Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
                 </Col>
                 <Col>
-                    <Alert variant="primary">Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
-                </Col>
-                <Col>
                     <Alert variant="secondary">Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
+                </Col> */}
+                <Col>
+                    <Alert variant="primary">Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
                 </Col>
            </ThemeProvider>
         </Row>

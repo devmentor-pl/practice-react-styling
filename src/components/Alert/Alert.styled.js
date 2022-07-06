@@ -2,9 +2,9 @@ import styled, {css} from 'styled-components';
 
 const DefaultStyledAlert = styled.div`
     display: block;
-    padding: 13px;
-    border-radius: 4px;
-    border: 1px solid #000000;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
     background-color: #FFFFFF;
     color: #000000;;
 `
