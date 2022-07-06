@@ -1,4 +1,7 @@
 import React from 'react';
+import Tabs from '../src/components/Tabs';
+import { ThemeProvider } from 'styled-components';
+import themeSettings from '../src/components/Tabs/theme.js'
 
 import { Row, Col, Tabs as RBTabs, Tab as RBTab, } from 'react-bootstrap';
 
@@ -19,7 +22,9 @@ const Task04 = () => {
                 </RBTabs>
             </Col>
             <Col>
-                Tabs!
+            <ThemeProvider theme={themeSettings}>
+               <Tabs/>
+            </ThemeProvider>
             </Col>
         </Row>
     )
