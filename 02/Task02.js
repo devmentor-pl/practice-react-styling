@@ -12,11 +12,11 @@ const Task02 = () => {
                 <RBButton variant="primary" size="lg">Button!</RBButton>
             </Col>
             <ThemeProvider theme={themeSettings}>
+             {/* <Col>
+                    <Button variant="secondary" size="sm">Button!</Button>
+                </Col> */}
                 <Col>
-                    <Button variant="primary" size="sm">Button!</Button>
-                </Col>
-                <Col>
-                    <Button variant="secondary">Button!</Button>
+                    <Button variant="primary">Button!</Button>
                 </Col>
             </ThemeProvider>
         </Row>

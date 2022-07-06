@@ -1,7 +1,6 @@
-import reactDom from 'react-dom';
 import styled, {css} from 'styled-components';
 
-const StyledButton = styled.div`
+const StyledButton = styled.button`
     display: block;
     text-align: center;
     border: 1px solid transparent;
@@ -11,6 +10,7 @@ const StyledButton = styled.div`
     border-radius: 0.3em;
     width: 100px;
     font-size: 1.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     
     ${ props => props.size === 'sm' && css`
         width: 65px;
@@ -21,13 +21,11 @@ const StyledButton = styled.div`
     &:hover {
         cursor: pointer;
         background-color:  ${props => props.theme[props.variant].backgroundHover};
-        transition: ease-in-out 0.3s 
         
     }
     &:active {
         background-color:  ${props => props.theme[props.variant].backgroundActive};
         border: 4px solid ${props => props.theme[props.variant].borderActive};
-        transition: ease-in-out 0.2s 
     }
 `
 export { StyledButton };
