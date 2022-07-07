@@ -16,7 +16,7 @@ const Task02 = () => {
                     <Button variant="secondary" size="sm">Button!</Button>
                 </Col> */}
                 <Col>
-                    <Button variant="primary">Button!</Button>
+                    <Button variant="primary" size="lg">Button!</Button>
                 </Col>
             </ThemeProvider>
         </Row>
