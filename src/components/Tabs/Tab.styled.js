@@ -22,5 +22,13 @@ const StyledTab = styled.a`
     &:disabled {
         color: ${props => props.theme.colorDisabled};
     }
+
+    ${props => props.active === true && css` {
+        color:  ${props => props.theme.colorHover};
+        border-color: #dee2e6 #dee2e6 #fff; 
+        text-decoration: none;
+    } 
+    `};
 `
 export { StyledTab };
+
