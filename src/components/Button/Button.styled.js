@@ -30,7 +30,11 @@ const StyledButton = styled.button`
     }
     &:active {
         background-color:  ${props => props.theme[props.variant].backgroundActive};
-        border: 4px solid ${props => props.theme[props.variant].borderActive};
+        border: 1px solid ${props => props.theme[props.variant].borderActive};
     }
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 .2rem rgba(38,143,255,.5);
+   }
 `
 export { StyledButton };
