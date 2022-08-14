@@ -3,8 +3,10 @@ import React from 'react';
 import { StyledAlert } from './Alert.styled';
 
 const Alert = props => {
+    console.log(props)
+    const {variant} = props
     return (
-        <StyledAlert>{props.children}</StyledAlert>
+        <StyledAlert variant={variant}>{props.children}</StyledAlert>
     );
 }
 
