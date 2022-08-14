@@ -2,14 +2,22 @@ import styled from 'styled-components';
 
 const StyledAlert = styled.div`
     display: block;
-    --bg-color: yellow;
-    background-color: var(--bg-color);
-    /* background-color: orange; */
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
     color: red;
     background-color: ${
-        props => props.variant === 'primary' ? '#cfe2ff' : null
+        props => {
+            switch(props.variant) {
+                case 'primary':
+                    return '#cfe2ff'
+                case 'secondary':
+                    return '#e2e3e5'
+                default: 
+                    return '#eee'
+            }
+        }
     }
 `
 
 export { StyledAlert };
-
