@@ -6,18 +6,31 @@ const StyledAlert = styled.div`
     padding: 1rem;
     margin-bottom: 1rem;
     color: red;
-    background-color: ${
+    ${
         props => {
             switch(props.variant) {
                 case 'primary':
-                    return '#cfe2ff'
+                    return {
+                        color: '#084298',
+                        backgroundColor: '#cfe2ff',
+                        border: '1px solid #b6d4fe'
+                    }
                 case 'secondary':
-                    return '#e2e3e5'
+                    return {
+                        color: '#41464b',
+                        backgroundColor: '#e2e3e5',
+                        border: '1px solid #d3d6d8e'
+                    }
                 default: 
-                    return '#eee'
+                return {
+                        color: 'white',
+                        backgroundColor: 'red',
+                        border: 'orange'
+                    }
             }
         }
     }
 `
 
 export { StyledAlert };
+
