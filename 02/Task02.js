@@ -15,7 +15,9 @@ const Task02 = () => {
                 <Button variant='primary' size='sm'>Button size=sm</Button>{' '}
                 <Button variant='primary' size='sm' active>Button active</Button>{' '}
                 <Button variant='primary' size='sm' disabled>Button disbaled</Button>{' '}
+                <br /><br />
             </Col>
+            <br />
         </Row>
 )
 }
