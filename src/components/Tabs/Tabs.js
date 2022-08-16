@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
-import styled, {css} from 'styled-components';
+import styled, {css, createGlobalStyle} from 'styled-components';
 
+const GlobalBackgroundColor = createGlobalStyle`
+    body {
+        background-color: #fefefe;
+        font-family: 'sans-serif';
+        box-sizing: border-box;
+    }
+`;
+
+const TabEmpty = styled.div`
+    color: gray;
+    display: inline-block;
+    padding: 10px;
+`
 const Tab = styled.div`
     color: #007bff;
     display: inline-block;
@@ -17,7 +30,7 @@ const Tab = styled.div`
 `
 const Text = styled.div`
     color: #212529;
-    border-top: ${props => props.line === true && '1px solid gray'}
+    border-top: ${props => props.line === true && '1px solid #dee2e6'}
 `
 
 class Tabs extends Component {
@@ -26,6 +39,7 @@ class Tabs extends Component {
         contents: [
             { title: 'Home', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec ligula faucibus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.' },
             { title: 'Profile', text: 'Donec dignissim ultricies felis, eu dictum eros congue in. In gravida lobortis libero nec tempus. Cras rutrum nisl ut leo volutpat rhoncus. Nulla massa nulla, viverra hendrerit laoreet at, tincidunt eu lacus.' },
+            { title: 'Contact', text: '' },
         ]
     } 
     handleClick = item => {
@@ -36,21 +50,28 @@ class Tabs extends Component {
 
         return (
             <div>
+                <GlobalBackgroundColor />
                 {
                 this.state.contents.map(item => {
-                    return(
+                    if(item.text === '') { 
+                    return (
                         <>
-                            <Tab tab={this.state.active === item.title} onClick={() => this.handleClick(item.title)}>{item.title}</Tab>
-                            {/* <div>{this.state.active === item.title ? item.text : null}</div> */}
+                            <TabEmpty>{item.title}</TabEmpty>
                         </>
                     )
+                    } else {                  
+                    return (
+                        <>
+                            <Tab tab={this.state.active === item.title} onClick={() => this.handleClick(item.title)}>{item.title}</Tab>
+                        </>
+                    )
+                    }
                 })
                 }
                 {
                 this.state.contents.map(item => {
                     return(
                         <>
-                            {/* <Tab onClick={() => this.handleClick(item.title)}>{item.title}</Tab> */}
                             <Text line={this.state.active === item.title}>{this.state.active === item.title ? item.text : null}</Text>
                         </>
                     )
