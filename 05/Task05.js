@@ -19,7 +19,6 @@ const Task04 = () => {
                 </RBCard>
             </Col>
             <Col>
-                <h2>Cars</h2>
                 <Cars />
             </Col>
         </Row>
