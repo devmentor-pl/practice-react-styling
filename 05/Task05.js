@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Cars from '../src/components/Cars'
 import { Row, Col, Card as RBCard, Button as RBButton } from 'react-bootstrap';
 
 const Task04 = () => {
@@ -19,7 +19,8 @@ const Task04 = () => {
                 </RBCard>
             </Col>
             <Col>
-                Card!
+                <h2>Cars</h2>
+                <Cars />
             </Col>
         </Row>
     )
