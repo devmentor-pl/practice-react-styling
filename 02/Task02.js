@@ -2,8 +2,6 @@ import React from 'react';
 
 import Button from './../src/components/Button';
 import { Row, Col, Button as RBButton } from 'react-bootstrap';
-import { ThemeProvider } from 'styled-components';
-import themeSettings from '../src/components/Button/theme';
 
 const Task02 = () => {
     return (
@@ -12,9 +10,7 @@ const Task02 = () => {
                 <RBButton variant="primary" size="lg">Button!</RBButton>
             </Col>
             <Col>
-                <ThemeProvider theme={themeSettings}>
-                    <Button variant='secondary' size='sm' isActive={true} />
-                </ThemeProvider>
+                <Button variant='primary' size='lg' isActive={true} content='Button' />
             </Col>
         </Row>
 )
