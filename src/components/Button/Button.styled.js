@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
 
 const StyledButton = styled.button`
-    padding: 0.75rem 0.375rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0.375rem;
+    border-radius: 0.25rem;
     border: 1px solid transparent;
     text-align: center;
     vertical-align: middle;
