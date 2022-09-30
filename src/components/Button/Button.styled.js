@@ -18,6 +18,11 @@ const DefaultStyledButton = styled.button `
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
+
+    &: {
+        color: #212529;
+        text-decoration: none;
+    }
 `; 
 
 const VariantStyledButton = styled(DefaultStyledButton)(({theme, variant}) => theme.button.variant[variant]);

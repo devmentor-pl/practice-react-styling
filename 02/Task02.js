@@ -7,10 +7,10 @@ const Task02 = () => {
     return (
         <Row>
             <Col>
-                <RBButton variant="secondary" size="sm">Button!</RBButton>
+                <RBButton variant="primary" size="sm">Button!</RBButton>
             </Col>
             <Col>
-                <Button variant="secondary" size="sm">Button!</Button>
+                <Button variant="primary" size="sm">Button!</Button>
             </Col>
         </Row>
 )

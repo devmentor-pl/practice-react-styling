@@ -19,11 +19,23 @@ const theme = {
             color: #fff;
             background-color: #007bff;
             border-color: #007bff;
+
+            &:hover {
+                color: #fff;
+                background-color: #0069d9;
+                border-color: #0062cc;
+            }
         `,
         secondary: css`
             color: #fff;
             background-color: #6c757d;
             border-color: #6c757d;
+
+            &:hover {
+                color: #fff;
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
         `
         },
         size: {
