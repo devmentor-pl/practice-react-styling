@@ -15,7 +15,9 @@ const Task02 = () => {
           </RBButton>
         </Col>
         <Col>
-          <Button variant="primary">Button!</Button>
+          <Button variant="primary" size="lg">
+            Button!
+          </Button>
           <Button variant="success" size="sm">
             Button!
           </Button>
