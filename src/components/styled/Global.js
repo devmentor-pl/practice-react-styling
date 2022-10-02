@@ -5,6 +5,7 @@ const StyledGlobal = createGlobalStyle`
     color: #007bff;
     text-decoration: none;
     background-color: transparent;
+    cursor: pointer;
   }
 `;
 
