@@ -12,7 +12,7 @@ const Task01 = () => {
           </RBAlert>
         </Col>
         <Col>
-          <Alert variant="secondary">
+          <Alert variant="primary">
             Uwaga! <em>Styled Components</em> nadchodzi!
           </Alert>
         </Col>
