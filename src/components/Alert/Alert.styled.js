@@ -14,5 +14,4 @@ const StyledAlert = styled(defaultStyledAlert)`
   border-color: ${({ theme, variant }) => theme[variant].borderColor};
 `;
 
-// ${(props) => props.theme.primary}
 export { StyledAlert };

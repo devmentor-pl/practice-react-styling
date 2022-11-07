@@ -2,7 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { ThemeProvider } from "styled-components";
-import themeSettings from "./Alert/theme";
+import alertSettings from "./Alert/theme";
+import buttonSettings from "./Button/theme";
 
 import Task01 from "./../../01/Task01";
 import Task02 from "./../../02/Task02";
@@ -22,13 +23,15 @@ const App = () => {
             <h2>Komponenty Twoje</h2>
           </Col>
         </Row>
-        <ThemeProvider theme={themeSettings}>
+        <ThemeProvider theme={alertSettings}>
           <Task01 />
         </ThemeProvider>
-        <Task02 />
-        <Task03 />
-        <Task04 />
-        <Task05 />
+        <ThemeProvider theme={buttonSettings}>
+          <Task02 />
+          <Task03 />
+          <Task04 />
+          <Task05 />
+        </ThemeProvider>
       </Container>
     </>
   );
