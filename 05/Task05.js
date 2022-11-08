@@ -1,5 +1,10 @@
 import React from 'react';
 import Card from "../src/components/Card/Card";
+import CardImage from "../src/components/Card/CardImg";
+import CardBody from "../src/components/Card/CardBody";
+import CardTitle from "../src/components/Card/CardTitle";
+import CardText from "../src/components/Card/CardText";
+import Button from "../src/components/Button/Button";
 
 import { Row, Col, Card as RBCard, Button as RBButton } from "react-bootstrap";
 
@@ -20,7 +25,18 @@ const Task05 = () => {
         </RBCard>
       </Col>
       <Col>
-        <Card></Card>
+        <Card>
+          <CardImage src={"https://picsum.photos/100/80"}></CardImage>
+          <CardBody>
+            <CardTitle title="Card Title"></CardTitle>
+            <CardText
+              content={`Some quick example text to build on the card title and make up the bulk of the card's content.`}
+            ></CardText>
+            <Button variant="primary" size="md">
+              Go somewhere
+            </Button>
+          </CardBody>
+        </Card>
       </Col>
     </Row>
   );
