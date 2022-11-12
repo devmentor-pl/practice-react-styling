@@ -1,7 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from "styled-components";
 
 const StyledAlert = styled.div`
-    display: block;
-`
+  --color-alfa: ${(props) => props.theme.colors.colorAlfa};
+  --color-beta: ${(props) => props.theme.colors.colorBeta};
+  display: block;
+  background-color: ${(props) =>
+    props.variant === "primary" ? "var(--color-alfa)" : "var(--color-beta)"};
+`;
 
 export { StyledAlert };
