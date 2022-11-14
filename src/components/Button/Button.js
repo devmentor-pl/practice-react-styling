@@ -8,6 +8,7 @@ const Button = (props) => {
       variant={props.variant}
       size={props.size}
       disabled={props.disabled}
+      active={props.active}
     >
       {props.children}
     </StyledButton>
