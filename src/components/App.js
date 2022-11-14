@@ -8,10 +8,21 @@ import Task03 from "./../../03/Task03";
 import Task04 from "./../../04/Task04";
 import Task05 from "./../../05/Task05";
 
-const themeSettings = {
+const themeAlertSettings = {
   colors: {
     colorAlfa: "#cfe2ff",
     colorBeta: "#e2e3e5",
+    colorGamma: "#d1e7dd",
+    colorDelta: "#f8d7da",
+  },
+};
+
+const themeButtonSettings = {
+  colors: {
+    colorAlfa: "#007bff",
+    colorBeta: "#6c757d",
+    colorGamma: "#218838",
+    colorDelta: "#ffc107",
   },
 };
 
@@ -27,10 +38,12 @@ const App = () => {
             <h2>Komponenty Twoje</h2>
           </Col>
         </Row>
-        <ThemeProvider theme={themeSettings}>
+        <ThemeProvider theme={themeAlertSettings}>
           <Task01 />
         </ThemeProvider>
-        <Task02 />
+        <ThemeProvider theme={themeButtonSettings}>
+          <Task02 />
+        </ThemeProvider>
         <Task03 />
         <Task04 />
         <Task05 />
