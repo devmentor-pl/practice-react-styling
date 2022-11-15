@@ -12,6 +12,8 @@ const StyledAlert = styled.div`
         return "#CFE2FF";
       case "secondary":
         return "#E2E3E5";
+      default:
+        return "grey";
     }
   }};
 `;
