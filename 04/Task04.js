@@ -1,4 +1,5 @@
 import React from 'react';
+import Tabs from './../src/components/Tab/Tabs';
 
 import { Row, Col, Tabs as RBTabs, Tab as RBTab, } from 'react-bootstrap';
 
@@ -19,7 +20,7 @@ const Task04 = () => {
                 </RBTabs>
             </Col>
             <Col>
-                Tabs!
+                <Tabs/>
             </Col>
         </Row>
     )
