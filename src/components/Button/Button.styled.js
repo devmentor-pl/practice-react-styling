@@ -1,34 +1,39 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const DefaultStyledButton = styled.button`
-    display: block;
-    cursor: pointer;
-    border: 1px solid transparent;
-    line-height: 1.5;
-    border-radius: ${props => (props.size === 'lg' ? '0.3rem' : '0.3rem')};
-    padding: ${props => (props.size === 'lg' ? '0.5rem 1rem' : '0.25rem 0.5rem')};
-    font-size: ${props => (props.size === 'lg' ? '1.25rem' : '0.875rem')};
-    transition: 'all 0.2s ease-in-out';
+    --color-alfa: ${props=>props.theme.colorBgc};
+    --color-beta: ${props=>props.theme.colorBgcFocus};
+    --color-gamma: ${props=>props.theme.colorShadow};
+    display: inline-block;
+    padding: .4rem 0.75rem;
+    border: 1px solid var(--color-alfa);
+    border-radius: 0.3rem;
+    background-color: var(--color-alfa);
+    box-shadow: 0.15s ease-in-out;
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.15s ease-in-out, border-color .15s ease-in-out, box-shadow 0.15s ease-in-out;
+    
+    ${ props => props.size === 'lg' && css`
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+    `}
     &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
+        opacity: 0.2;
+        cursor: none
     }
-`;
-
-const StyledButton = styled(DefaultStyledButton)`
-    color: ${props => props.theme[props.variant].color};
-    background-color: ${props => props.theme[props.variant].backgroundColor};
-    border-color: ${props => props.theme[props.variant].borderColor};
+    &:focus { 
+        border: 1px solid var(--color-beta); 
+        outline: none;      
+        box-shadow: 0 0 0px 3px var(--color-gamma);
+        background-color: var(--color-beta)
+    }
     &:hover {
-      color: ${props => props.theme[props.variant].colorHover};
-      background-color: ${props => props.theme[props.variant].backgroundColorHover};
-      border-color: ${props => props.theme[props.variant].borderColorHover};
+        background-color: var(--color-beta)
     }
-    &:active {
-      color: ${props => props.theme[props.variant].colorActive};
-      background-color: ${props => props.theme[props.variant].backgroundColorActive};
-      border-color: ${props => props.theme[props.variant].borderColorActive};
-    }
-`;
+`
+
+
+const StyledButton = styled(DefaultStyledButton)(props=> props.style);
 
 export default StyledButton;

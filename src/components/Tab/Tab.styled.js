@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 
 const DefaultStyledTab  = styled.li`
-    --color-primary: ${props=>props.theme.colorLine};
-    --color-secondary: ${props=>props.theme.colorFont};
+    --color-alfa: ${props=>props.theme.colorLine};
+    --color-beta: ${props=>props.theme.colorFont};
     border: 1px solid transparent;
-    border-bottom-color: var(--color-primary);
+    border-bottom-color: var(--color-alfa);
     border-top-left-radius: 0.2rem;
     border-top-right-radius: 0.2rem;
-    color: var(--color-secondary);
+    color: var(--color-beta);
     &:last-child {
         flex-grow: 2;
     }
@@ -26,13 +26,13 @@ const DefaultStyledTab  = styled.li`
     &:hover {
         ${props=> 
             (!props.marked & props.active) && css`
-            border-color: var(--color-primary)`
+            border-color: var(--color-alfa)`
         }
     }
    
     ${props=> 
         props.marked && css`
-        border-color: var(--color-primary);
+        border-color: var(--color-beta);
         border-bottom-color: white;
         `
     }
