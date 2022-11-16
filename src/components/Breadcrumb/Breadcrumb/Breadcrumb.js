@@ -1,7 +1,7 @@
 import React from "react";
 
 import { StyledBreadcrumb } from "./Breadcrumb.styled";
-import { StyledList } from "./List.styled";
+import { StyledList } from "./Breadcrumb.styled";
 
 const Breadcrumb = (props) => {
   return (

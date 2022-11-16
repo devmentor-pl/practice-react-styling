@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 const StyledBreadcrumbItem = styled.li`
   display: list-item;
+  color: #6c757d;
 `;
 
 const StyledBreadcrumbItemLink = styled.a`
@@ -16,9 +17,6 @@ const StyledBreadcrumbItemLink = styled.a`
     display: inline-block;
     padding-right: 0.5rem;
     color: #6c757d;`}
-  }
-  &:active {
-    ${(props) => (props.last ? "#6c757d" : "#0076ff")}
   }
 `;
 

@@ -12,7 +12,6 @@ const BreadcrumbItem = (props) => {
         href={props.href}
         type={props.type}
         first={props.first}
-        last={props.last}
       >
         {props.children}
       </StyledBreadcrumbItemLink>

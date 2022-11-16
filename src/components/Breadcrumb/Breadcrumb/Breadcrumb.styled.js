@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components";
 
+const StyledBreadcrumb = styled.nav`
+  display: block;
+`;
+
 const StyledList = styled.ol`
   display: flex;
   flex-wrap: wrap;
@@ -8,4 +12,4 @@ const StyledList = styled.ol`
   background-color: #e9ecef;
 `;
 
-export { StyledList };
+export { StyledBreadcrumb, StyledList };

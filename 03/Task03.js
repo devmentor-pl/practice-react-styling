@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Row, Col, Breadcrumb as RBBreadcrumb } from 'react-bootstrap';
 
-import Breadcrumb from "./../src/components/Breadcrumb";
-import BreadcrumbItem from "./../src/components/Breadcrumb/Breadcrumb.Item";
+import Breadcrumb from "./../src/components/Breadcrumb/Breadcrumb";
+import BreadcrumbItem from "./../src/components/Breadcrumb/Breadcrumb.Item/Breadcrumb.Item";
 
 const Task03 = () => {
   return (
@@ -22,10 +22,13 @@ const Task03 = () => {
           <BreadcrumbItem href="#" first="first">
             Home
           </BreadcrumbItem>
-          <BreadcrumbItem href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+          <BreadcrumbItem
+            last="last"
+            href="https://getbootstrap.com/docs/4.0/components/breadcrumb/"
+          >
             Library
           </BreadcrumbItem>
-          <BreadcrumbItem last="last">Data</BreadcrumbItem>
+          <BreadcrumbItem>Data</BreadcrumbItem>
         </Breadcrumb>
       </Col>
     </Row>
