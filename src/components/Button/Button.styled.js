@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   ${(props) => {
     switch (props.variant) {
       case "primary":
-        return `background-color: var(--color-alfa) `;
+        return `background-color: var(--color-alfa)`;
       case "secondary":
         return ` background-color: var(--color-beta)`;
       case "success":
@@ -35,5 +35,9 @@ const StyledButton = styled.button`
     color: white;
     border: 5px solid yellow;
   }
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
 `;
 export { StyledButton };

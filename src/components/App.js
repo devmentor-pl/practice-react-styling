@@ -29,25 +29,25 @@ const themeButtonSettings = {
 const App = () => {
   return (
     <>
-      <Container fluid>
-        <Row>
-          <Col>
-            <h2>Komponenty React Boostrap</h2>
-          </Col>
-          <Col>
-            <h2>Komponenty Twoje</h2>
-          </Col>
-        </Row>
-        <ThemeProvider theme={themeAlertSettings}>
-          <Task01 />
-        </ThemeProvider>
-        <ThemeProvider theme={themeButtonSettings}>
+      <ThemeProvider theme={themeButtonSettings}>
+        <Container fluid>
+          <Row>
+            <Col>
+              <h2>Komponenty React Boostrap</h2>
+            </Col>
+            <Col>
+              <h2>Komponenty Twoje</h2>
+            </Col>
+          </Row>
+          <ThemeProvider theme={themeAlertSettings}>
+            <Task01 />
+          </ThemeProvider>
           <Task02 />
-        </ThemeProvider>
-        <Task03 />
-        <Task04 />
-        <Task05 />
-      </Container>
+          <Task03 />
+          <Task04 />
+          <Task05 />
+        </Container>
+      </ThemeProvider>
     </>
   );
 };
