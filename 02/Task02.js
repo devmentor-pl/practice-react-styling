@@ -8,16 +8,12 @@ const Task02 = () => {
         <Row>
             <Col>
                 <RBButton variant="primary" size="lg">Button!</RBButton>
-                <RBButton variant="secondary" size="sm">Button!</RBButton>
             </Col>
             <Col>
-                <Button variant="primary" size="sm" disabled>Button!</Button>
-                <Button variant="secondary" size="sm" active>Button!</Button>
-                <Button variant="primary" size="sm">Button!</Button>
-                <Button size="lg">Button!</Button>
+                <Button variant="primary" size="lg">Button!</Button>
             </Col>
         </Row>
-)
+    )
 }
 
 export default Task02;
