@@ -24,10 +24,11 @@ const StyledItem = styled.li`
 
 const StyledLink = styled.a.attrs(props => ({
     href: props.href,
-    active: props.isActive,
+    active: props.isActive // nothing has changed?
 }))`
-    &:active{
-        color: #6c757d;
+    &:hover {
+        color: ${props=>props.isActive ? 'none' : 'inherit'}
     }
+    color: ${props => props.isActive ? '#6c757d' : '#007bff'}
 `
 export {StyledBreadCrumb, StyledItem, StyledLink}
