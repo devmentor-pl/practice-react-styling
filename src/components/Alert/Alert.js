@@ -1,10 +1,14 @@
 import React from 'react';
-
+import { ThemeProvider } from 'styled-components';
 import { StyledAlert } from './Alert.styled';
+import {theme} from '../theme'
 
-const Alert = props => {
+const Alert = (props) => {
+    const {variant = "default"} = props
     return (
-        <StyledAlert>{props.children}</StyledAlert>
+        <ThemeProvider theme={theme[variant]}>
+            <StyledAlert>{props.children}</StyledAlert>
+        </ThemeProvider>
     );
 }
 
