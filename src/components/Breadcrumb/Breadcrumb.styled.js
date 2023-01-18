@@ -24,7 +24,7 @@ const StyledItem = styled.li`
 
 const StyledLink = styled.a.attrs(props => ({
     href: props.href,
-    active: props.isActive // nothing has changed?
+    active: props.isActive
 }))`
     &:hover {
         color: ${props=>props.isActive ? 'none' : 'inherit'}
