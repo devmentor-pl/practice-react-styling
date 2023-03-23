@@ -1,7 +1,7 @@
 # Styled website elements
 
 ## About project
-The aim of the project was to create an important page elements (ex. buttons, cards, navigation) styled in two methods - React Bootstrap and Styled Components. 
+The aim of the project was to create an important page elements (ex. buttons, cards, navigation) styled using styled components and compare this solution with applied React Bootstrap.
 
 ## Features
 1. Text with variable background color
