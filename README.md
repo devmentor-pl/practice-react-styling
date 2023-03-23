@@ -18,8 +18,8 @@ The aim of the project was to create an important page elements (ex. buttons, ca
 ![Babel](https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.JS-339933?style=for-the-badge&logo=Node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-[![Styled Components](https://img.shields.io/badge/-StyledComponents-black?style=flat-square&logo=Styled-Components)](https://github.com/olafsulich/)
-[![React Bootstrap](https://img.shields.io/badge/-ReactBootstrap-black?style=flat-square&logo=React-Bootstrap&logoColor=white)](https://github.com/olafsulich/)
+[![Styled Components](https://img.shields.io/badge/-StyledComponents-black?style=for-the-badge&logo=Styled-Components)](https://github.com/olafsulich/)
+[![React Bootstrap](https://img.shields.io/badge/-ReactBootstrap-black?style=for-the-badge&logo=React-Bootstrap&logoColor=white)](https://github.com/olafsulich/)
 
 ## Installation and configuration
 The project uses [node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/), follow the steps below to be able to use the application.
