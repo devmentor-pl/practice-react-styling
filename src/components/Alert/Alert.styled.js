@@ -14,4 +14,4 @@ const StyledAlert = styled.div`
     margin-bottom: 1rem;
 `
 
-export { StyledAlert };
+export {StyledAlert};
