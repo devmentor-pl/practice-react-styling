@@ -1,37 +1,40 @@
-> :dart: *Chcę mieć absolutną pewność, że **darmowe materiały**, które publikuję, spełniają Twoje oczekiwania. Dlatego oferuję Ci ebooka o wartości 39 PLN: `Jak zostać programistą? SKUTECZNY PRZEWODNIK` w zamian za [wypełnienie ankiety](https://devmentor.pl/ankieta).*
+# Styled website elements
 
-&nbsp;
+## About project
+The aim of the project was to create an important page elements (ex. buttons, cards, navigation) styled using styled components and compare this solution with applied React Bootstrap.
 
-# React: Stylowanie
+## Features
+1. Text with variable background color
+2. Button with variable background color
+3. Navigation with breadcrumb
+4. Tabbed components
+5. Card with image, title, text and button
 
-Możliwości stylowania (definiowania wyglądu) komponentów w Reakcie jest bardzo dużo – w szczególności gdy spojrzy się na listę rozwiązań [CSS in JS](https://github.com/MicheleBertoli/css-in-js). My skupimy się na jednym z najpopularniejszych narzędzi: [Styled Components](https://styled-components.com/).
+## Technologies
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white)
+![Babel](https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.JS-339933?style=for-the-badge&logo=Node.js&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+[![Styled Components](https://img.shields.io/badge/-StyledComponents-black?style=for-the-badge&logo=Styled-Components)](https://github.com/olafsulich/)
+[![React Bootstrap](https://img.shields.io/badge/-ReactBootstrap-black?style=for-the-badge&logo=React-Bootstrap&logoColor=white)](https://github.com/olafsulich/)
 
-Twoim zadaniem będzie przygotować w każdym zadaniu inny komponent (lub zestaw komponentów), wzorując się na frameworku [React Boostrap](https://react-bootstrap.github.io/), który został już podpięty do naszej konfiguracji. Wystarczy tylko zainstalować zależności przez `npm i` i uruchomić przy pomocy `npm start`.
+## Installation and configuration
+The project uses [node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/), follow the steps below to be able to use the application.
+- Install all npm packages using command:
+````
+npm i
+````
+- To start develop mode use command:
+````
+npm start
+````
 
-&nbsp;
 
-## Zadania
+## Author
+Linkedin - [Katarzyna Panz](https://www.linkedin.com/in/katarzyna-panz-584399228/)
 
-&nbsp;
-
-### :point_right: &nbsp; [`#01`](./01) &nbsp; [`#02`](./02) &nbsp; [`#03`](./03) &nbsp; [`#04`](./04) &nbsp; [`#05`](./05) &nbsp; :point_left:
-
-&nbsp;
-
-:arrow_left: [*poprzedni zestaw zadań **(React: Nowoczesny**)*](https://github.com/devmentor-pl/practice-react-modern)
-
-&nbsp;
-
-## Jak prawidłowo wykonać zadania?
-
-Najpierw zrób tzw. [`fork`](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) (prawy, górny róg strony). W ten sposób utworzysz kopię tego repozytorium na Twoim koncie GitHub. 
-
-Teraz będziesz mógł wykonywać zadania na swoim repozytorium. Wystarczy, że skopiujesz pliki na swój komputer przy pomocy komendy [`git clone`](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
-
-Zadania rozwiązuj jedno po drugim, ponieważ z każdym kolejnym ich poziom trudności wzrasta.  
-
-Pamiętaj o zapisywaniu historii zmian w plikach przy pomocy komend [`git add`](https://github.com/git-guides/git-add) oraz [`git commit`](https://github.com/git-guides/git-commit).
-
-Aby wysłać dane na zdalny serwer, wystarczy komenda [`git push`](https://github.com/git-guides/git-push).
-
-Po wysłaniu plików na GitHuba zrób [Pull Request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork), abym mógł wykonać [Code Review](https://en.wikipedia.org/wiki/Code_review) Twoich zadań.
+## Special thanks
+Thanks to my [Mentor - devmentor.pl](https://devmentor.pl/) – for providing me with this task and for code review.
