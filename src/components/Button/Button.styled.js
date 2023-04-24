@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const DefaultStyledButton = styled.button`
+const StyledButton = styled.button`
     --color-alfa: ${props=>props.theme.backgroundColor};
     --color-beta: ${props=>props.theme.focusColor};
     background-color: var(--color-alfa);
@@ -25,7 +25,5 @@ const DefaultStyledButton = styled.button`
         cursor: none
     }
 `
-
-const StyledButton = styled(DefaultStyledButton)(props=> props.style);
 
 export default StyledButton;
