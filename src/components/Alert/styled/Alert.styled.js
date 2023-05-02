@@ -12,4 +12,8 @@ const StyledAlert = styled.div`
   padding: 0.75rem 1.25rem;
 `;
 
+// StyledAlert.defaultProps = {
+//   {}
+// }
+
 export { StyledAlert };

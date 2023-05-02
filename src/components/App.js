@@ -8,7 +8,7 @@ import Task03 from "./../../03/Task03";
 import Task04 from "./../../04/Task04";
 import Task05 from "./../../05/Task05";
 
-import alertTheme from "./Alert/styled/theme";
+import buttonTheme from "./Button/styled/theme";
 
 const App = () => {
   return (
@@ -22,10 +22,8 @@ const App = () => {
             <h2>Komponenty Twoje</h2>
           </Col>
         </Row>
-        <ThemeProvider theme={alertTheme}>
           <Task01 />
-        </ThemeProvider>
-        <Task02 />
+          <Task02 />
         <Task03 />
         <Task04 />
         <Task05 />
