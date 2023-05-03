@@ -33,7 +33,3 @@ const StyledButton = styled.button`
 `;
 
 export { StyledButton };
-
-// ${{size} => size === 'small' && css`
-// border-radius: 15px;
-// `}
