@@ -12,11 +12,13 @@ const StyledButton = styled.button`
   background-color: ${({ active }) =>
     active ? "var(--active-bg)" : "var(--base-bg)"};
   border: 1px solid transparent;
-  border-radius: ${({ theme, size }) => size && theme[size].borderRadius};
+  border-radius: ${({ theme, size }) =>
+    size ? theme[size].borderRadius : ".25rem"};
   font-size: ${({ theme, size }) => size && theme[size].fontSize};
   padding: ${({ theme, size }) =>
-    size &&
-    `${theme[size].paddingY} ${theme[size].paddingX} ${theme[size].paddingY} ${theme[size].paddingX}`};
+    size
+      ? `${theme[size].paddingY} ${theme[size].paddingX} ${theme[size].paddingY} ${theme[size].paddingX}`
+      : ".375rem 0.75rem;"};
   color: ${({ theme, variant }) => variant && theme[variant].fontColor};
   opacity: ${({ disabled }) => (disabled ? "var(--disabled-opacity)" : "1")};
   transition: 0.15s ease-in-out;
