@@ -10,7 +10,12 @@ const BreadcrumbItem = ({ active = false, href, children }) => {
       {active ? (
         children
       ) : (
-        <a href={href} role="button" className={`${prefix}__link`}>
+        <a
+          href={href}
+          role="button"
+          className={`${prefix}__link`}
+          onClick={(e) => e.preventDefault()}
+        >
           {children}
         </a>
       )}

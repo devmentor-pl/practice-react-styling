@@ -19,7 +19,9 @@ const MyTabs = ({ defaultActiveKey, children }) => {
           onClick={() => !disabled && setActiveTab(eventKey)}
         >
           {/* Nie wiem za bardzo, czy ten # jest tutaj ok, ale znany mi wcześniej hack z javascript:void(0), sypie błędem w konsoli. Poniższe rozwiązanie dopisuje do url "#", a widzę, że w rozwiązaniu bootstrapowym jest to rozwiązane */}
-          <a href="#">{title}</a>
+          <a href="#" onClick={(e) => e.preventDefault()}>
+            {title}
+          </a>
         </StyledTabItem>
       );
     }
