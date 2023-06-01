@@ -9,6 +9,8 @@ const DefaultStyledAlert = styled.div`
 	border-radius: 0.25rem;
 `;
 
-const StyledAlert = styled(DefaultStyledAlert)((props) => props.theme);
+const StyledAlert = styled(DefaultStyledAlert)(
+	({ theme, variant }) => theme[variant]
+);
 
 export { StyledAlert };

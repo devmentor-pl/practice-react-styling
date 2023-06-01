@@ -55,7 +55,7 @@ const Task04 = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
 							condimentum lacus nec ligula faucibus rhoncus. Vestibulum ante
 							ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-							Curae;{' '}
+							Curae;
 						</p>
 					</Tab>
 					<Tab

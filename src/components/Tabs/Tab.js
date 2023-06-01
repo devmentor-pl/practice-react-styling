@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyledTab } from './Tab.styled';
 
-const Tab = (props) => {
-	return <StyledTab>{props.children}</StyledTab>;
+const Tab = ({ children }) => {
+	return <StyledTab>{children}</StyledTab>;
 };
 
 export default Tab;

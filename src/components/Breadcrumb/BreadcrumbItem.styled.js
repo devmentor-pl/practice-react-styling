@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const StyledBreadcrumbItem = styled.li`
+const DefaultStyledBreadcrumbItem = styled.li`
 	display: list-item;
 	text-align: -webkit-match-parent;
-	
+
 	&:not(:first-child):before {
 		display: inline-block;
 		padding-left: 0.5rem;
@@ -13,13 +13,25 @@ const StyledBreadcrumbItem = styled.li`
 	}
 
 	a {
-		color: ${({ active }) => (active ? '#6c757d' : '#007bff')};
 		text-decoration: none;
 		background-color: transparent;
+	}
+`;
+
+const StyledBreadcrumbItem = styled(DefaultStyledBreadcrumbItem)`
+	a {
+		color: ${({ theme, active }) => (active ? theme.active.color : '#007bff')};
 
 		&:hover {
-            color: ${({ active }) => (active ? '#6c757d' : '#0056b3')};
-			text-decoration: ${({active}) => active ? null : 'underline'};
+			color: ${({ theme, active }) =>
+				active ? theme.active.hover.color : theme.hover.color};
+
+			text-decoration: ${({ theme, active }) =>
+				active
+					? theme.active.hover.textDecoration
+					: theme.hover.textDecoration};
+
+			cursor: ${({ active }) => (active ? 'text' : 'pointer')};
 		}
 	}
 `;

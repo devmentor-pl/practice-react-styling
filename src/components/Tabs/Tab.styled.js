@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const StyledTab = styled.a`
+const DefaultStyledTab = styled.a`
 	display: block;
 	padding: 0.5rem 1rem;
 	margin-bottom: -1px;
@@ -10,36 +10,15 @@ const StyledTab = styled.a`
 	text-decoration: none;
 	background-color: transparent;
 
-	${({ disabled }) =>
-		disabled &&
-		css`
-			color: #6c757d;
-			background-color: transparent;
-			border-color: transparent;
-			cursor: default;
-			pointer-events: none;
-		`}
+	&:hover {
+		border-color: #e9ecef #e9ecef #dee2e6;
+		text-decoration: none;
+	}
+`;
 
-	${({ isActive }) =>
-		isActive &&
-		css`
-			color: #495057;
-			background-color: #fff;
-			border-color: #dee2e6 #dee2e6 #fff;
-		`}
-
-	
-	${({ isActive }) =>
-		isActive
-			? `&:hover {
-				color:  #495057;
-				border-bottom: none;
-				text-decoration: none;
-			}`
-			: `&:hover {
-					border-color: #e9ecef #e9ecef #dee2e6;
-					text-decoration: none;
-			}`}
+const StyledTab = styled(DefaultStyledTab)`
+	${({ theme, disabled }) => disabled && theme.tab.disabled}
+	${({ theme, isActive }) => isActive && theme.tab.isActive}
 `;
 
 export { StyledTab };

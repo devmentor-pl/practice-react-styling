@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import themeSettings from './theme';
 import { StyledTabs } from './Tabs.styled';
 import { StyledTab } from './Tab.styled';
 
@@ -27,17 +29,17 @@ const Tabs = (props) => {
 	});
 
 	const renderContent = children.map((item) => {
-		const { title, eventKey, children, disabled = false } = item.props;
+		const { eventKey, children } = item.props;
 		if (active === eventKey) {
 			return children;
 		}
 	});
 
 	return (
-		<>
+		<ThemeProvider theme={themeSettings}>
 			<StyledTabs>{renderTabs}</StyledTabs>
 			<div>{renderContent}</div>
-		</>
+		</ThemeProvider>
 	);
 };
 

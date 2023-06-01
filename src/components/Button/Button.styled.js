@@ -22,22 +22,26 @@ const DefaultStyledButton = styled.button`
 `;
 
 const StyledButton = styled(DefaultStyledButton)`
-	color: ${({ theme }) => theme.color};
-	background-color: ${({ theme, active }) =>
-		active ? theme.active.backgroundColor : theme.backgroundColor};
+	color: ${({ theme, variant }) => variant && theme[variant].color};
+	background-color: ${({ theme, variant, active }) =>
+		active
+			? theme[variant].active.backgroundColor
+			: theme[variant].backgroundColor};
 	border-color: ${({ theme, active }) =>
 		active ? theme.active.borderColor : theme.borderColor};
-	padding: ${({ theme }) => theme.padding};
-	font-size: ${({ theme }) => theme.fontSize};
-	border-radius: ${({ theme }) => theme.borderRadius};
-	opacity: ${({ theme, disabled }) => (disabled ? theme.disabled.opacity : 1)};
+	padding: ${({ theme, size }) => size && theme[size].padding};
+	font-size: ${({ theme, size }) => size && theme[size].fontSize};
+	border-radius: ${({ theme, size }) => size && theme[size].borderRadius};
+	opacity: ${({ theme, variant, disabled }) =>
+		disabled ? theme[variant].disabled.opacity : 1};
 
 	&:hover {
-		${({ theme, disabled }) => (disabled ? null : theme.hover)}
+		${({ theme, variant, disabled }) =>
+			disabled ? null : theme[variant].hover}
 	}
 
 	&:focus {
-		${({ theme }) => theme.focus}
+		${({ theme, variant }) => theme[variant].focus}
 	}
 `;
 

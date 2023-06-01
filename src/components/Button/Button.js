@@ -5,15 +5,16 @@ import themeSettings from './theme';
 import { StyledButton } from './Button.styled';
 
 const Button = (props) => {
-	const { variant, size, active, disabled } = props;
+	const { variant = 'primary', size, active, disabled, children } = props;
 
 	return (
-		<ThemeProvider
-			theme={{ ...themeSettings[variant], ...themeSettings[size] }}>
+		<ThemeProvider theme={themeSettings}>
 			<StyledButton
+				variant={variant}
+				size={size}
 				active={active}
 				disabled={disabled}>
-				{props.children}
+				{children}
 			</StyledButton>
 		</ThemeProvider>
 	);
