@@ -1,18 +1,21 @@
-const settings = {
+export const settings = {
 	primary: {
 		bgColor: "#0d6efd",
 		hoverColor: "#0b5ed7",
 		focus: {
-			bgColor: "#0062cc",
+			bgColor: "#0069d9",
 			boxShadow: "0 0 0 0.2rem rgba(38,143,255,.5)",
+			border: "#0062cc",
 		},
 	},
+
 	secondary: {
 		bgColor: "#6c757d",
 		hoverColor: "#5c636a",
 		focus: {
 			bgColor: "#565c64",
 			boxShadow: "0 0 0 0.2rem rgba(86,92,100,.5)",
+			border: "transparent",
 		},
 	},
 	lg: {
@@ -28,5 +31,3 @@ const settings = {
 		paddingVertical: "0.25rem",
 	},
 };
-
-export default settings;

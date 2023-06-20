@@ -4,7 +4,8 @@ const StyledButton = styled.button`
 	background-color: ${props =>
 		props.variant && props.theme[props.variant].bgColor};
 	border-radius: ${props => props.size && props.theme[props.size].borderRadius};
-	color: "#fff";
+	border: transparent;
+	color: white;
 	font-size: ${props => props.size && props.theme[props.size].fontSize};
 	padding: ${props =>
 		props.size &&
@@ -20,6 +21,7 @@ const StyledButton = styled.button`
 			props.variant && props.theme[props.variant].focus.bgColor};
 		box-shadow: ${props =>
 			props.variant && props.theme[props.variant].focus.boxShadow};
+		border: transparent;
 	}
 	&:hover {
 		background-color: ${props =>
