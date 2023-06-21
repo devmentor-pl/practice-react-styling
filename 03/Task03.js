@@ -1,7 +1,7 @@
-import React from 'react';
-
-import { BreadCrumb, BreadCrumbItem } from "../src/components/Breadcrumb";
+import React from "react";
 import { Row, Col, Breadcrumb as RBBreadcrumb } from "react-bootstrap";
+import { BreadcrumbItem } from "../src/components/Breadcrumb";
+import { Breadcrumb } from "../src/components/Breadcrumb";
 
 const Task03 = () => {
 	return (
@@ -16,13 +16,13 @@ const Task03 = () => {
 				</RBBreadcrumb>
 			</Col>
 			<Col>
-				<BreadCrumb>
-					<BreadCrumbItem href='#'>Home</BreadCrumbItem>
-					<BreadCrumbItem href='https://getbootstrap.com/docs/4.0/components/breadcrumb/'>
+				<Breadcrumb>
+					<BreadcrumbItem href='#'>Home</BreadcrumbItem>
+					<BreadcrumbItem href='https://getbootstrap.com/docs/4.0/components/breadcrumb/'>
 						Library
-					</BreadCrumbItem>
-					<BreadCrumbItem active='active'>Data</BreadCrumbItem>
-				</BreadCrumb>
+					</BreadcrumbItem>
+					<BreadcrumbItem active='active'>Data</BreadcrumbItem>
+				</Breadcrumb>
 			</Col>
 		</Row>
 	);

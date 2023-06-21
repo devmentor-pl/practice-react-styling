@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
-const StyledBreadCrumbItem = styled.li`
+const StyledBreadcrumbItem = styled.li`
 	padding-left: 0.6rem;
+	color: ${props => (props.active ? "#6c757d" : "#007bff")};
 	a {
-		color: ${props => (props.active ? "#6c757d" : `#007bff`)};
+		text-decoration: none;
 		background-color: transparent;
 	}
+
 	& + &::before {
-		color: #6c757d;
 		display: inline-block;
 		padding-right: 0.5rem;
+		color: #6c757d;
 		content: "/";
 	}
 `;
 
-export { StyledBreadCrumbItem };
+export { StyledBreadcrumbItem };

@@ -1,13 +1,9 @@
 import React from "react";
 import { StyledBreadCrumb } from "./Breadcrumb.styled";
 
-const BreadCrumb = props => {
+const Breadcrumb = props => {
 	const { children } = props;
-	return (
-		<nav>
-			<StyledBreadCrumb>{children}</StyledBreadCrumb>
-		</nav>
-	);
+	return <StyledBreadCrumb>{children}</StyledBreadCrumb>;
 };
 
-export default BreadCrumb;
+export default Breadcrumb;

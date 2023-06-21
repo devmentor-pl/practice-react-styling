@@ -1,4 +1,4 @@
-import BreadCrumb from "./BreadCrumb";
-import BreadCrumbItem from "./BreadcrumbItem";
+import BreadcrumbItem from "./BreacrumbItem";
+import Breadcrumb from "./BreadCrumb";
 
-export { BreadCrumb, BreadCrumbItem };
+export { BreadcrumbItem, Breadcrumb };
