@@ -17,7 +17,7 @@ const Tabs = props => {
 					href='#'
 					eventKey={eventKey}
 					active={eventKey === activeTab}
-					disable={disabled}
+					disabled={disabled}
 					onClick={() => !disabled && setActiveTab(eventKey)}>
 					{title}
 				</StyledTab>

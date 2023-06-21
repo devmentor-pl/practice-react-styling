@@ -7,6 +7,8 @@ import {
 	CardImg,
 } from "../src/components/Card";
 import Button from "../src/components/Button";
+import { ThemeProvider } from "styled-components";
+import { settings } from "../src/components/Button/theme";
 
 import { Row, Col, Card as RBCard, Button as RBButton } from "react-bootstrap";
 
@@ -26,19 +28,23 @@ const Task05 = () => {
 					</RBCard.Body>
 				</RBCard>
 			</Col>
-			<Col>
-				<Card style={{ width: "18rem" }}>
-					<CardImg variant='top' src='https://picsum.photos/100/80' />
-					<CardBody>
-						<CardTitle>Card Title</CardTitle>
-						<CardText>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</CardText>
-						<Button variant='primary'>Go somewhere</Button>
-					</CardBody>
-				</Card>
-			</Col>
+			<ThemeProvider theme={settings}>
+				<Col>
+					<Card style={{ width: "18rem" }}>
+						<CardImg variant='top' src='https://picsum.photos/100/80' />
+						<CardBody>
+							<CardTitle>Card Title</CardTitle>
+							<CardText>
+								Some quick example text to build on the card title and make up
+								the bulk of the card's content.
+							</CardText>
+							<Button variant='primary' size='small'>
+								Go somewhere
+							</Button>
+						</CardBody>
+					</Card>
+				</Col>
+			</ThemeProvider>
 		</Row>
 	);
 };
