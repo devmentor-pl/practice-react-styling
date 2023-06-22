@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from "styled-components";
-import { variantSettings } from "../src/components/Alert/theme";
+import { variantSettingsAlert } from "../src/theme";
 import Alert from "./../src/components/Alert";
 import { Row, Col, Alert as RBAlert } from "react-bootstrap";
 
@@ -13,7 +13,7 @@ const Task01 = () => {
 				</RBAlert>
 			</Col>
 			<Col>
-				<ThemeProvider theme={variantSettings}>
+				<ThemeProvider theme={variantSettingsAlert}>
 					<Alert variant='primary'>
 						Uwaga! <em>Styled Components</em> nadchodzi!
 					</Alert>

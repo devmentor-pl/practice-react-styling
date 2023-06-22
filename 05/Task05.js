@@ -8,7 +8,7 @@ import {
 } from "../src/components/Card";
 import Button from "../src/components/Button";
 import { ThemeProvider } from "styled-components";
-import { settings } from "../src/components/Button/theme";
+import { variantSettingsButton } from "../src/theme";
 
 import { Row, Col, Card as RBCard, Button as RBButton } from "react-bootstrap";
 
@@ -28,7 +28,7 @@ const Task05 = () => {
 					</RBCard.Body>
 				</RBCard>
 			</Col>
-			<ThemeProvider theme={settings}>
+			<ThemeProvider theme={variantSettingsButton}>
 				<Col>
 					<Card style={{ width: "18rem" }}>
 						<CardImg variant='top' src='https://picsum.photos/100/80' />
@@ -38,7 +38,7 @@ const Task05 = () => {
 								Some quick example text to build on the card title and make up
 								the bulk of the card's content.
 							</CardText>
-							<Button variant='primary' size='small'>
+							<Button variant='primary' size='medium'>
 								Go somewhere
 							</Button>
 						</CardBody>

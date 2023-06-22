@@ -1,4 +1,17 @@
-export const settings = {
+export const variantSettingsAlert = {
+	primary: {
+		color: "#004085",
+		backgroundColor: "#cce5ff",
+		borderColor: "#b8daff",
+	},
+	secondary: {
+		color: "#383d41",
+		backgroundColor: "#e2e3e5",
+		borderColor: "#d6d8db",
+	},
+};
+
+export const variantSettingsButton = {
 	primary: {
 		bgColor: "#0d6efd",
 		hoverColor: "#0b5ed7",
@@ -24,6 +37,14 @@ export const settings = {
 		paddingHorizontal: "1rem",
 		paddingVertical: "0.5rem",
 	},
+
+	medium: {
+		borderRadius: "0.25rem",
+		fontSize: "1rem",
+		paddingHorizontal: "0.75rem",
+		paddingVertical: "0.375rem",
+	},
+
 	small: {
 		borderRadius: "0.25rem",
 		fontSize: "0.875rem",
