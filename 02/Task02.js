@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from "styled-components";
-import { variantSettingsButton } from "../src/theme";
+import theme from "../src/components/theme";
 import Button from "../src/components/Button";
 import { Row, Col, Button as RBButton } from "react-bootstrap";
 
@@ -12,7 +12,7 @@ const Task02 = () => {
 					Button!
 				</RBButton>
 			</Col>
-			<ThemeProvider theme={variantSettingsButton}>
+			<ThemeProvider theme={theme}>
 				<Col>
 					<Button variant='primary' size='lg'>
 						Button!

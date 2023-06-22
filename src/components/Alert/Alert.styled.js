@@ -5,11 +5,11 @@ const StyledAlert = styled.div`
 	padding: 0.75rem 1.25rem;
 	margin-bottom: 1rem;
 	border-radius: 0.25rem;
-	color: ${props => props.variant && props.theme[props.variant].color};
-	background-color: ${props =>
-		props.variant && props.theme[props.variant].backgroundColor};
-	border-color: ${props =>
-		props.variant && props.theme[props.variant].borderColor};
+	color: ${({ variant, theme }) => variant && theme.alert[variant].color};
+	background-color: ${({ variant, theme }) =>
+		variant && theme.alert[variant].backgroundColor};
+	border-color: ${({ variant, theme }) =>
+		variant && theme.alert[variant].borderColor};
 `;
 
 export { StyledAlert };

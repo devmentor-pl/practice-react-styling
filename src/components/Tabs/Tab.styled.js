@@ -26,8 +26,8 @@ const StyledTab = styled.a`
 		`}
 
         &:hover {
-		border-color: ${props =>
-			props.eventKey !== props.active && "#e9ecef #e9ecef #dee2e6"};
+		border-color: ${({ eventKey, active }) =>
+			eventKey !== active && "#e9ecef #e9ecef #dee2e6"};
 		text-decoration: none;
 	}
 `;

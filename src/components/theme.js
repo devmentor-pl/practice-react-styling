@@ -1,4 +1,4 @@
-export const variantSettingsAlert = {
+const alert = {
 	primary: {
 		color: "#004085",
 		backgroundColor: "#cce5ff",
@@ -11,7 +11,7 @@ export const variantSettingsAlert = {
 	},
 };
 
-export const variantSettingsButton = {
+const button = {
 	primary: {
 		bgColor: "#0d6efd",
 		hoverColor: "#0b5ed7",
@@ -52,3 +52,10 @@ export const variantSettingsButton = {
 		paddingVertical: "0.25rem",
 	},
 };
+
+const theme = {
+	alert: alert,
+	button: button,
+};
+
+export default theme;

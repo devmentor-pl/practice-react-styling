@@ -8,7 +8,7 @@ import {
 } from "../src/components/Card";
 import Button from "../src/components/Button";
 import { ThemeProvider } from "styled-components";
-import { variantSettingsButton } from "../src/theme";
+import theme from "../src/components/theme";
 
 import { Row, Col, Card as RBCard, Button as RBButton } from "react-bootstrap";
 
@@ -28,7 +28,7 @@ const Task05 = () => {
 					</RBCard.Body>
 				</RBCard>
 			</Col>
-			<ThemeProvider theme={variantSettingsButton}>
+			<ThemeProvider theme={theme}>
 				<Col>
 					<Card style={{ width: "18rem" }}>
 						<CardImg variant='top' src='https://picsum.photos/100/80' />
