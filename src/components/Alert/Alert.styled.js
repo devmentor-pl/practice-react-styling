@@ -11,7 +11,7 @@ const StyledAlertDefault = styled.div`
 const StyledAlert = styled(StyledAlertDefault)(
     props => ({
         backgroundColor: props.theme[props.variant + 'Background'],
-        border: props.theme[props.variant + 'Border'],
+        borderColor: props.theme[props.variant + 'Border'],
         color: props.theme[props.variant + 'TextColor'],
     })
 )
