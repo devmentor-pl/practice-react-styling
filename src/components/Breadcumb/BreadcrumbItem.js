@@ -1,11 +1,12 @@
 import React from 'react';
-import StyledBreadcrumbItem from './BreadcrumbItem.styled';
-import LinkItem from './LinkItem';
+import { StyledBreadcrumbItem, StyledLinkItem } from './BreadcrumbItem.styled';
 
 function BreadcrumbItem({ href, children, active }) {
     return (
-        <StyledBreadcrumbItem active={active}>
-            <LinkItem href={href} title={children} />
+        <StyledBreadcrumbItem>
+            <StyledLinkItem active={active} href={href}>
+                {children}
+            </StyledLinkItem>
         </StyledBreadcrumbItem>
     );
 }
