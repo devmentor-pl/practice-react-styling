@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, css } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import Button from './../src/components/Button';
 import { Row, Col, Button as RBButton } from 'react-bootstrap';
