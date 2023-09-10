@@ -24,13 +24,12 @@ const DefaultStyledAlert = styled.div`
 // 		if (variant === 'primary') return '#b8daff';
 // 		if (variant === 'secondary') return '#d6d8db';
 // 		return '#c2c2c2';
-// 	}};
 // `;
 const StyledAlert = styled(DefaultStyledAlert)`
-	color: ${({ theme, variant }) => theme.color[variant]?.color};
+	color: ${({ theme, variant }) => theme.alert[variant]?.color};
 	background-color: ${({ theme, variant }) =>
-		theme.color[variant]?.backgroundColor};
-	border-color: ${({ theme, variant }) => theme.color[variant]?.borderColor};
+		theme.alert[variant]?.backgroundColor};
+	border-color: ${({ theme, variant }) => theme.alert[variant]?.borderColor};
 `;
 
 
