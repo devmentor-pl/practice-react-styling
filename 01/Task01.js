@@ -6,14 +6,14 @@ import { Row, Col, Alert as RBAlert } from 'react-bootstrap';
 const Task01 = () => {
     const themeSettings = {
         primary: {
-            color: '#6EA8FE',
-            backgroundColor: '#031633',
-            border: '1px solid #084298',
+            color: '#004085',
+            backgroundColor: '#CCE5FF',
+            border: '1px solid #B8DAFF',
         },
         secondary: {
-            color: '#A7ACB1',
-            backgroundColor: '#161719',
-            border: '1px solid #41464B',
+            color: '#383D41',
+            backgroundColor: '#E2E3E5',
+            border: '1px solid #D6D8DB',
         }
 
     }
@@ -24,7 +24,7 @@ const Task01 = () => {
             </Col>
             <Col>
                 <ThemeProvider theme={themeSettings}>
-                    <Alert >Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
+                    <Alert variant='primary'>Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
                 </ThemeProvider>
             </Col>
         </Row>
