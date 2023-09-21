@@ -19,6 +19,7 @@ const StyledTab = styled.a.attrs({ href: "#" })`
    ${props => props.disabled && css`
         color: #6c757d;
         cursor: default;
+        
         &:hover {
           border-color: transparent;
           color: #6c757d

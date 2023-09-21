@@ -1,7 +1,7 @@
 const themeSettings = {
     primary: {
-        color: '#FFFFFF',
-        backgroundColor: '#007BFF',
+        color: '#fff',
+        backgroundColor: '#007bff',
     },
     secondary: {
         color: '#FFFFFF',
