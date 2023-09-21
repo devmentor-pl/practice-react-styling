@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
-const StyledTab = styled.li`
-    color: #007BFF; // dlaczego gdy zamiast 'li' jest 'a' nie zmienia koloru?
+const StyledTab = styled.a.attrs({ href: "#" })`
     display: inline-block;
     padding: 8px 16px;
     margin-bottom: -1px;
@@ -12,25 +11,17 @@ const StyledTab = styled.li`
 
 
     &:hover {
+     text-decoration: none;
         border: 1px solid ;
-        border-color: #dee2e6 #dee2e6 transparent;
-        
+        border-color: #dee2e6 #dee2e6 transparent;     
    }
-   /* &:active {
-        border: 1px solid ;
-        border-color: #dee2e6 #dee2e6 #fff;
-        border-bottom-color: white;
-    } */
-   /* &:disabled {
-    color:red
-   } */ //nie rozumiem dlaczego te selektory nie działają - disabled i active
-
+    
    ${props => props.disabled && css`
-        color: grey;
+        color: #6c757d;
         cursor: default;
         &:hover {
-            border:none;
-
+          border-color: transparent;
+          color: #6c757d
         }
    `}
 
@@ -41,7 +32,6 @@ const StyledTab = styled.li`
         border-color: #dee2e6 ;
         border-bottom-color: white;
    `}
-
 `
 
 

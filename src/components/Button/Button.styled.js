@@ -10,13 +10,15 @@ const DefaultStyledButton = styled.button`
     };
      &:active {
         ${props => props.theme.active}
+    };
+    &:disabled {
+        ${({ disabled, theme }) => disabled === true && theme.disabled}
     }
     `
 
 const StyledButton = styled(DefaultStyledButton)`
     ${({ variant, theme }) => theme[variant]};
-    ${({ size, theme }) => size === 'lg' && theme.large};
-    ${({ disabled, theme }) => disabled === true && theme.disabled};`
+    ${({ size, theme }) => size === 'lg' && theme.large};`
 
 export { StyledButton }
 
