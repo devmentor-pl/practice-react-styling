@@ -8,21 +8,22 @@ const StyledButton = styled.button`
     color: #fff;
     padding: 0.5rem 1rem;
     transition: 0.5s;
-    ${ ({variant, theme,disabled,active}) => {
+    ${ ({variant, theme,isDisabled,isActive}) => {
         const {backgroundColor,hoverBackgroundColor} = theme.variants[variant] || {};
 
 
-        if (disabled) {
+        if (isDisabled) {
             return css`
                 background-color: gray; 
-                cursor: not-allowed;
+                cursor: not-allowed;    
+                pointer-events:none;
             `;
         }
 
-        if (!active) {
+        if (isActive) {
             return css`
-                cursor: not-allowed;
-                background-color: ${hoverBackgroundColor}
+                background-color: ${hoverBackgroundColor};
+                pointer-events:none;
             `
         }
 

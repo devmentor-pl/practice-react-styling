@@ -12,7 +12,7 @@ const Task02 = () => {
             </Col>
             <Col>
                 <ThemeProvider theme={themeSettings}>
-                    <Button variant="primary">Button!</Button>
+                    <Button variant="primary" > Button!</Button>
                 </ThemeProvider>
             </Col>
         </Row>
