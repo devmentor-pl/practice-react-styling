@@ -7,7 +7,7 @@ const StyledAlert = styled.div`
     border-radius: 5px;
     background-color: #fff;
     color: #000;
-    padding: 1rem 1rem;
+    padding: 0.8rem 1.2rem;
     width: calc(100% - 20px);
     margin: 12px 10px;
     font-size: 16px;
