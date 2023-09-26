@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import ResetStyle from './ResetStyle';
 
 import Task01 from './../../01/Task01';
 import Task02 from './../../02/Task02';
@@ -11,6 +12,7 @@ import Task05 from './../../05/Task05';
 const App = () => {
     return (
         <>
+            <ResetStyle />
             <Container fluid>
                 <Row>
                     <Col>
@@ -19,11 +21,11 @@ const App = () => {
                         <h2>Komponenty Twoje</h2>
                     </Col>
                 </Row>
-                <Task01/>
-                <Task02/>
-                <Task03/>
-                <Task04/>
-                <Task05/>
+                <Task01 />
+                <Task02 />
+                <Task03 />
+                <Task04 />
+                <Task05 />
             </Container>
         </>
     )

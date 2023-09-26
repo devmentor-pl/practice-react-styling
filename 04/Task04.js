@@ -1,6 +1,8 @@
 import React from 'react';
+import Tabs from '../src/components/Tabs/Tabs';
+import Tab from '../src/components/Tabs/Tab';
 
-import { Row, Col, Tabs as RBTabs, Tab as RBTab, } from 'react-bootstrap';
+import { Row, Col, Tabs as RBTabs, Tab as RBTab } from 'react-bootstrap';
 
 const Task04 = () => {
     return (
@@ -19,7 +21,7 @@ const Task04 = () => {
                 </RBTabs>
             </Col>
             <Col>
-                Tabs!
+                <Tabs />
             </Col>
         </Row>
     )
