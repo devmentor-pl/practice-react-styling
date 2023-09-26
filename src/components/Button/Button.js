@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledButton from './Button.styled';
 
-const Button = ({ variant, size, active, disabled, children }) => {
+const Button = ({ variant, size = 'md', active, disabled, children }) => {
 	return (
 		<StyledButton
 			variant={variant}
