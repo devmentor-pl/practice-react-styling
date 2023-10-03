@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { ThemeProvider, css } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import theme from '../theme'
 
 import Task01 from './../../01/Task01';
 import Task02 from './../../02/Task02';
@@ -8,20 +9,7 @@ import Task03 from './../../03/Task03';
 import Task04 from './../../04/Task04';
 import Task05 from './../../05/Task05';
 
-const theme = {
-    alert: {
-        primary: css`
-        color: #004085;
-        background-color: #cce5ff;
-        border-color: #b8daff;
-        `,
-        light: css`
-        color: #f8f9fa;
-        background-color: #989a9b;
-        border-color: #888b8d;
-        `
-    }
-}
+
 
 const App = () => {
     return (
