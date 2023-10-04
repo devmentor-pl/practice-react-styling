@@ -19,11 +19,23 @@ const theme = {
           color: #fff;
           background-color: #007bff;
           border-color: #007bff;
+
+          &:hover {
+            color: #fff;
+            background-color: #0069d9;
+            border-color: #0062cc;
+          }
           `,
           success: css`
           color: #fff;
           background-color: #28a745;
           border-color: #28a745;
+
+          &:hover {
+            color: #fff;
+            background-color: #218838;
+            border-color: #1e7e34;
+          }
           `
       },
       size: {
