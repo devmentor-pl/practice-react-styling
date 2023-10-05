@@ -52,6 +52,9 @@ const theme = {
           border-radius: 0.2rem;
           `
       }
+  },
+  breadcrumb: {
+
   }
 }
 
