@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ThemeProvider } from 'styled-components';
-import theme from '../theme'
+import theme from './styled/theme'
 import StyledGlobal from './styled/Global';
 
 import Task01 from './../../01/Task01';
