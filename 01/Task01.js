@@ -6,12 +6,12 @@ import { Row, Col, Alert as RBAlert } from 'react-bootstrap';
 
 const themeSettings = {
 	primary: {
-		color: 'blue',
-		backgroundColor: 'aquamarine',
+		color: '#004085',
+		backgroundColor: '#CCE5FF',
 	},
 	secondary: {
-		color: 'green',
-		backgroundColor: 'lightgreen',
+		color: '#383D41',
+		backgroundColor: '#E2E3E5',
 	},
 };
 
