@@ -61,9 +61,9 @@ const Task02 = () => {
 			</Col>
 			<Col>
 				<ThemeProvider theme={theme}>
-					<CustomButton>DEFAULT</CustomButton>
+					<CustomButton>THEMED</CustomButton>
 				</ThemeProvider>
-				<CustomButton>THEMED</CustomButton>
+				<CustomButton>DeFAULT</CustomButton>
 			</Col>
 		</Row>
 	);
