@@ -1,34 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { ThemeProvider } from 'react-bootstrap';
+import { ThemeProvider } from 'styled-components';
+import { variant } from './../src/components/Button/Button.styled';
 
 import Button from './../src/components/Button';
 import { Row, Col, Button as RBButton } from 'react-bootstrap';
-
-
-
-const CustomButton = styled.button`
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border-radius: 3px;
-  color: ${props => props.theme.main};
-  border: 2px solid ${props => props.theme.main};
-  background-color: ${props => props.theme.backgroundColor};
-`;
-
-CustomButton.defaultProps = {
-  theme: {
-    main: 'red',
-    backgroundColor: 'black',
-  },
-};
-
-const theme = {
-  main: 'blue',
-  backgroundColor: 'blue',
-};
 
 const Task02 = () => {
 	return (
@@ -60,14 +36,38 @@ const Task02 = () => {
 				</RBButton>
 			</Col>
 			<Col>
-				<ThemeProvider theme={theme}>
-					<CustomButton>THEMED</CustomButton>
+				<ThemeProvider theme={variant}>
+					<Button style={variant.primary} size='lg'>
+						Button!
+					</Button>
+					<Button style={variant.secondary} size='lg'>
+						Button!
+					</Button>
+
+					<Button style={variant.primary} size='sm'>
+						Button!
+					</Button>
+					<Button style={variant.secondary} size='sm'>
+						Button!
+					</Button>
+
+					<Button active style={variant.primary} size='sm'>
+						Button!
+					</Button>
+					<Button  active style={variant.secondary} size='sm'>
+						Button!
+					</Button>
+
+					<Button disabled style={variant.primary} size='sm'>
+						Button!
+					</Button>
+					<Button disabled style={variant.secondary} size='sm'>
+						Button!
+					</Button>
 				</ThemeProvider>
-				<CustomButton>DeFAULT</CustomButton>
 			</Col>
 		</Row>
 	);
 };
 
 export default Task02;
-

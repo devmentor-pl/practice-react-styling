@@ -1,10 +1,14 @@
+// button.js
 import React from 'react';
 
-import { StyledButton } from './Alert.styled';
+import { StyledButton } from './Button.styled';
 
 const Button = props => {
-		console.log(props);
-	return <StyledButton style={props.style}>{props.children}</StyledButton>;
+	return (
+		<StyledButton active={props.active} disabled={props.disabled} size={props.size} style={props.style}>
+			{props.children}
+		</StyledButton>
+	);
 };
 
 export default Button;
