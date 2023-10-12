@@ -5,8 +5,14 @@ import Alert from './../src/components/Alert';
 import { Row, Col, Alert as RBAlert } from 'react-bootstrap';
 
 const themeSettings = {
-	color: 'green',
-	backgroundColor: 'tomato',
+	primary: {
+		color: 'blue',
+		backgroundColor: 'aquamarine',
+	},
+	secondary: {
+		color: 'green',
+		backgroundColor: 'lightgreen',
+	},
 };
 
 const Task01 = () => {
@@ -21,21 +27,20 @@ const Task01 = () => {
 				</RBAlert>
 			</Col>
 			<Col>
-				<ThemeProvider theme={themeSettings}>
-					{/* to ma wygladac w ten sposob? czyli props.variant musi dobierac style z propsa ktory przekazuje - czyli gdzies pod spodem musze napisac tyle "typow" ile kolorow chce miec w wariantach? */}
-					{/* <Alert variant='primary'> */}
-					{/* <Alert variant='secondary'> */}
+				<ThemeProvider theme={themeSettings.primary}>
 					<Alert>
 						Uwaga! <em>Styled Components</em> nadchodzi!
 					</Alert>
 				</ThemeProvider>
-				<Alert>
-					Uwaga! <em>Styled Components</em> nadchodzi!
-				</Alert>
+				<ThemeProvider theme={themeSettings.secondary}>
+					<Alert>
+						Uwaga! <em>Styled Components</em> nadchodzi!
+					</Alert>
+				</ThemeProvider>
 			</Col>
 		</Row>
 	);
 };
-
 export default Task01;
+
 
