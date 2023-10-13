@@ -66,7 +66,7 @@ const variant = {
 		activeBackground: '#545B62',
 		mainBorderColor: 'transparent',
 		hoverColor: '#5A6268',
-		focusOutlineColor: '#92C7FF',
+		focusOutlineColor: '#C0C4C8',
 		disabled: '#9FA5AA',
 	},
 };
