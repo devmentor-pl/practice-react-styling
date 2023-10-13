@@ -2,55 +2,75 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-	display: inline-block;
 	border-radius: 5px;
-	color: #ffff;
-	border: 2px solid transparent;
-	background-color: ${props => props.theme.backgroundColor};
-	padding: ${props => (props.size === 'lg' ? size.lg : size.sm)};
-	font-size: ${props => (props.size === 'lg' ? '20px' : '14px')};
+	color: ${props => props.theme.color};
+	background-color: ${props => props.theme.background};
+	border: 1px solid ${props => props.theme.mainBorderColor};
 
-	&:hover {
-		background-color: blue;
+	/* DEFAULT SIZE */
+	padding: 6px 12px;
+	font-size: 16px;
+	/* SM */
+	padding: ${props => (props.size === 'sm' ? size.sm : null)};
+	font-size: ${props => (props.size === 'sm' ? '14px' : null)};
+	/* LG */
+	padding: ${props => (props.size === 'lg' ? size.lg : null)};
+	font-size: ${props => (props.size === 'lg' ? '20px' : null)};
+
+	&.active {
+		background-color: ${props => props.theme.activeBackground};
+		&:hover {
+			background-color: ${props => props.theme.activeBackground};
+		}
 	}
 
-	&:active,
-	&[aria-pressed='true'] {
-		background-color: ${props => props.theme.activeBgc};
+	&:hover {
+		background-color: ${props => props.theme.hoverColor};
 	}
 
 	&:focus {
-		outline: 3px solid ${props => props.theme.borderColor};
+		outline: 3px solid ${props => props.theme.focusOutlineColor};
 	}
 
-	button:disabled,
-	button[disabled] {
-		border: 1px solid black;
-		background-color: red;
-		color: blue;
+	:disabled {
+		background-color: ${props => props.theme.disabled};
+		cursor: pointer;
 	}
 `;
 
 StyledButton.defaultProps = {
 	theme: {
-		backgroundColor: 'black',
-		borderColor: 'transparent',
-		activeBgc: 'transparent',
+		color: '#000',
+		background: '#fff',
+		activeBackground: 'grey',
+		mainBorderColor: '#000',
+		hoverColor: '#808080',
+		focusOutlineColor: 'black',
+		disabled: 'grey',
 	},
 };
 
 const variant = {
 	primary: {
-		backgroundColor: '#007BFF',
-		borderColor: '#6EA8FE',
-		activeBgc: '#0062CC',
+		color: '#ffff',
+		background: '#007BFF',
+		activeBackground: '#0062cc',
+		mainBorderColor: 'transparent',
+		hoverColor: '#0069d9',
+		focusOutlineColor: '#92C7FF',
+		disabled: '#59A9FF',
 	},
 	secondary: {
-		backgroundColor: '#6C757D',
-		borderColor: '#DEE2E6',
-		activeBgc: '#545B62',
+		color: '#ffff',
+		background: '#6C757D',
+		activeBackground: '#545B62',
+		mainBorderColor: 'transparent',
+		hoverColor: '#5A6268',
+		focusOutlineColor: '#92C7FF',
+		disabled: '#9FA5AA',
 	},
 };
+
 const size = {
 	lg: '8px 16px',
 	sm: '4px 8px',

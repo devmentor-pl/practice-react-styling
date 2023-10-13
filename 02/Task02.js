@@ -10,61 +10,31 @@ const Task02 = () => {
 	return (
 		<Row>
 			<Col>
-				<RBButton variant='primary' size='lg'>
-					Button!
-				</RBButton>
 				<RBButton variant='secondary' size='lg'>
 					Button!
 				</RBButton>
-				<RBButton variant='primary' size='sm'>
+				<RBButton active variant='secondary' size='sm'>
 					Button!
 				</RBButton>
-				<RBButton variant='secondary' size='sm'>
+				<RBButton disabled variant='secondary'>
 					Button!
 				</RBButton>
-				<RBButton variant='primary' size='sm' active>
-					Button!
-				</RBButton>
-				<RBButton variant='secondary' size='sm' active>
-					Button!
-				</RBButton>
-				<RBButton variant='primary' size='sm' disabled>
-					Button!
-				</RBButton>
-				<RBButton variant='secondary' size='sm' disabled>
-					Button!
-				</RBButton>
+				<RBButton variant='primary'>Button!</RBButton>
 			</Col>
 			<Col>
-				<ThemeProvider theme={variant}>
-					<Button style={variant.primary} size='lg'>
+				{/* w buttonach nie mozna stylami przesylac, bo nadpisza inline stylami i w tedy active i inne pseudoklasy musialby byc stytlowaNE za pomoca important, wiec zostaje takie rozwiazanie, button musi zostac owrapowany themeProviderem, i w themeProvider sie podaje wariant zamiast w atrybucie przycisku... */}
+				{/* ale za to Button ma swoje customowe style jesli jest poza themeProviderem... */}
+				<ThemeProvider theme={variant.secondary}>
+					<Button size='lg'>Button!</Button>
+					<Button active={true} size='sm'>
 						Button!
 					</Button>
-					<Button style={variant.secondary} size='lg'>
-						Button!
-					</Button>
-
-					<Button style={variant.primary} size='sm'>
-						Button!
-					</Button>
-					<Button style={variant.secondary} size='sm'>
-						Button!
-					</Button>
-
-					<Button active style={variant.primary} size='sm'>
-						Button!
-					</Button>
-					<Button  active style={variant.secondary} size='sm'>
-						Button!
-					</Button>
-
-					<Button disabled style={variant.primary} size='sm'>
-						Button!
-					</Button>
-					<Button disabled style={variant.secondary} size='sm'>
-						Button!
-					</Button>
+					<Button disabled>Button!</Button>
 				</ThemeProvider>
+				<ThemeProvider theme={variant.primary}>
+					<Button>Button!</Button>
+				</ThemeProvider>
+				{/* <Button>DEFAULT</Button> */}
 			</Col>
 		</Row>
 	);
