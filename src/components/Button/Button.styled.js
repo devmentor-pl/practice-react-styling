@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
 	border-radius: 5px;
-	color: ${props => props.theme.color};
-	background-color: ${props => props.theme.background};
-	border: 1px solid ${props => props.theme.mainBorderColor};
+	color: ${props => props.theme[props.variant].color};
+	background-color: ${props => props.theme[props.variant].background};
+	border: 1px solid ${props => props.theme[props.variant].mainBorderColor};
 
 	/* DEFAULT SIZE */
 	padding: 6px 12px;
@@ -18,28 +18,28 @@ const StyledButton = styled.button`
 	font-size: ${props => (props.size === 'lg' ? '20px' : null)};
 
 	&.active {
-		background-color: ${props => props.theme.activeBackground};
+		background-color: ${props => props.theme[props.variant].activeBackground};
 		&:hover {
-			background-color: ${props => props.theme.activeBackground};
+			background-color: ${props => props.theme[props.variant].activeBackground};
 		}
 	}
 
 	&:hover {
-		background-color: ${props => props.theme.hoverColor};
+		background-color: ${props => props.theme[props.variant].hoverColor};
 	}
 
 	&:focus {
-		outline: 3px solid ${props => props.theme.focusOutlineColor};
+		outline: 3px solid ${props => props.theme[props.variant].focusOutlineColor};
 	}
 
 	:disabled {
-		background-color: ${props => props.theme.disabled};
+		background-color: ${props => props.theme[props.variant].disabled};
 		cursor: pointer;
 	}
 `;
 
 StyledButton.defaultProps = {
-	theme: {
+	variant: {
 		color: '#000',
 		background: '#fff',
 		activeBackground: 'grey',
@@ -50,7 +50,7 @@ StyledButton.defaultProps = {
 	},
 };
 
-const variant = {
+const theme = {
 	primary: {
 		color: '#ffff',
 		background: '#007BFF',
@@ -71,9 +71,10 @@ const variant = {
 	},
 };
 
+
 const size = {
 	lg: '8px 16px',
 	sm: '4px 8px',
 };
 
-export { StyledButton, variant };
+export { StyledButton, theme };

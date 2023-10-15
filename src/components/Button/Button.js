@@ -8,6 +8,7 @@ const Button = props => {
 
 	return (
 		<StyledButton
+			variant={props.variant}
 			disabled={props.disabled}
 			className={props.active ? 'active' : ''}
 			size={props.size}
