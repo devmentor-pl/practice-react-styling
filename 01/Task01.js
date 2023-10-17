@@ -12,21 +12,17 @@ const Task01 = () => {
 				<RBAlert variant='primary'>
 					Uwaga! <em>Styled Components</em> nadchodzi!
 				</RBAlert>
-				<RBAlert variant='secondary'>
+				<RBAlert variant='success'>
 					Uwaga! <em>Styled Components</em> nadchodzi!
 				</RBAlert>
 			</Col>
 			<Col>
 				<ThemeProvider theme={themeSettings}>
-					<Alert variant={themeSettings.primary} >
-						Uwaga! <em>Styled Components</em> nadchodzi!
-					</Alert>
-					<Alert variant={themeSettings.secondary}>
+					<Alert variant={themeSettings.primary}>
 						Uwaga! <em>Styled Components</em> nadchodzi!
 					</Alert>
 				</ThemeProvider>
-				{/* czemu alert bez styli wewnatrz ThemePRovidera nie ma tych defaultowych styli?? */}
-				{/* <Alert>default styles</Alert> */}
+					<Alert>Uwaga! <em>Styled defaultTheme Components</em> nadchodzi!</Alert>
 			</Col>
 		</Row>
 	);
