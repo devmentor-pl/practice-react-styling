@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledNav = styled.nav``;
+
 const StyledBreadCrumb = styled.ul`
 	display: flex;
 	justify-content: flex-start;
@@ -11,6 +12,7 @@ const StyledBreadCrumb = styled.ul`
 	background-color: #e9ecef;
 	border-radius: 0.25rem;
 `;
+
 const StyledItem = styled.li`
 	color: #6c757d;
 	&:not(:last-child):after {
