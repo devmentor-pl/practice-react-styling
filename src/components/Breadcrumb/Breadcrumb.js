@@ -1,15 +1,16 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { StyledBreadcrumb } from './Breadcrumb.styled';
 import themeSettings from './theme';
 
-import { StyledAlert } from './Alert.styled';
-
-const Alert = ({variant, children}) => {
+const Breadcrumb = ({ children }) => {
 	return (
 		<ThemeProvider theme={themeSettings}>
-			<StyledAlert variant={variant}>{children}</StyledAlert>
+			<nav>
+				<StyledBreadcrumb>{children}</StyledBreadcrumb>
+			</nav>
 		</ThemeProvider>
 	);
 };
 
-export default Alert;
+export default Breadcrumb;
