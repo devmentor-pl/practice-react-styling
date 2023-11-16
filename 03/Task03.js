@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Breadscrumb from '../src/components/Breadscrumb'
 import { Row, Col, Breadcrumb as RBBreadcrumb } from 'react-bootstrap';
 
 const Task03 = () => {
@@ -15,10 +15,10 @@ const Task03 = () => {
                 </RBBreadcrumb>
             </Col>
             <Col>
-                Breadcrumb!
+                <Breadscrumb />
             </Col>
         </Row>
-)
+    )
 }
 
 export default Task03;
