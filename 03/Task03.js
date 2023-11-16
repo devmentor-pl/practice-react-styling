@@ -1,4 +1,7 @@
 import React from 'react';
+import Breadcrumb from './../src/components/Breadcrumb';
+import { ThemeProvider } from 'styled-components';
+import themeSettings from '../src/components/Breadcrumb/theme.js'
 
 import { Row, Col, Breadcrumb as RBBreadcrumb } from 'react-bootstrap';
 
@@ -15,7 +18,9 @@ const Task03 = () => {
                 </RBBreadcrumb>
             </Col>
             <Col>
-                Breadcrumb!
+            <ThemeProvider theme={themeSettings}>
+                <Breadcrumb/>
+            </ThemeProvider>
             </Col>
         </Row>
 )
