@@ -26,7 +26,7 @@ const Task02 = () => {
         <StyledButton theme={theme} variant="secondary" size="md" active>
           Button!
         </StyledButton>
-        <StyledButton theme={theme} variant="primary" size="lg" disabled>
+        <StyledButton theme={theme} variant="primary" size="md" disabled>
           Disabled Button!
         </StyledButton>
       </Col>

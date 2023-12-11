@@ -19,13 +19,13 @@ const StyledButton = styled.button`
     props.size === 'lg' &&
     css`
       font-size: 18px;
-      padding: 12px 24px;
+      padding: 1rem 1.5rem;
     `}
   ${(props) =>
     props.size === 'md' &&
     css`
       font-size: 16px;
-      padding: 10px 20px;
+      padding: 0.75rem 1rem;
     `}
 
   ${(props) =>
