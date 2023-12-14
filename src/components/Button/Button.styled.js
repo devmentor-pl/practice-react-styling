@@ -1,10 +1,13 @@
 import styled, { css } from 'styled-components';
 
 const StyledButton = styled.button`
-  padding: 10px;
+  padding: 0.375rem 0.75rem;
   border: none;
   cursor: pointer;
-  border-radius: 0.3rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
   margin-right: 0.5rem;
   background-color: ${(props) => props.theme.button.primary.bgColor};
   color: #fff;
