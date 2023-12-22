@@ -1,15 +1,10 @@
 import React from 'react';
-
 import { ThemeProvider } from 'styled-components';
+import theme from '../src/components/theme';
 import { Row, Col, Breadcrumb as RBBreadcrumb } from 'react-bootstrap';
 import { Breadcrumb, BreadcrumbItem } from '../src/components/Breadcrumb/index';
 
 const Task03 = () => {
-  const theme = {
-    primaryColor: '#007bff',
-    secondaryColor: '#6c757d',
-    hoverColor: '#0056b3',
-  };
   return (
     <ThemeProvider theme={theme}>
       <Row>
@@ -23,13 +18,15 @@ const Task03 = () => {
           </RBBreadcrumb>
         </Col>
         <Col>
-          <Breadcrumb>
-            <BreadcrumbItem href="#">Home</BreadcrumbItem>
-            <BreadcrumbItem href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-              Library
-            </BreadcrumbItem>
-            <BreadcrumbItem active>Data</BreadcrumbItem>
-          </Breadcrumb>
+          <ThemeProvider theme={theme}>
+            <Breadcrumb>
+              <BreadcrumbItem href="#">Home</BreadcrumbItem>
+              <BreadcrumbItem href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+                Library
+              </BreadcrumbItem>
+              <BreadcrumbItem active>Data</BreadcrumbItem>
+            </Breadcrumb>
+          </ThemeProvider>
         </Col>
       </Row>
     </ThemeProvider>
