@@ -5,9 +5,9 @@ const StyledAlert = styled.div`
   margin-bottom: 1rem;
   border-radius: 0.25rem;
   border: 1px solid transparent;
-  color: #fff;
-  background-color: ${(props) =>
-    props.theme[props.variant] || props.theme.default};
+  color: ${({ variant, theme }) => variant && theme.alert[variant].color};
+  background-color: ${({ variant, theme }) =>
+    variant && theme.alert[variant].backgroundColor};
 `;
 
 export { StyledAlert };
