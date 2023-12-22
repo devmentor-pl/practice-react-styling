@@ -1,49 +1,42 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  padding: 0.375rem 0.75rem;
-  border: none;
+  padding: ${({ size, theme }) =>
+    size &&
+    `${theme.button[size].paddingVertical} ${theme.button[size].paddingHorizontal}`};
+  border: transparent;
   cursor: pointer;
-  border-radius: 0.25rem;
+  border-radius: ${({ size, theme }) =>
+    size && theme.button[size].borderRadius};
   text-align: center;
-  font-size: 1rem;
+  font-size: ${({ size, theme }) => size && theme.button[size].fontSize};
   line-height: 1.5;
   margin-right: 0.5rem;
-  background-color: ${(props) => props.theme.button.primary.bgColor};
+  background-color: ${({ variant, theme }) =>
+    variant && theme.button[variant].bgColor};
   color: #fff;
 
-  ${(props) =>
-    props.variant === 'secondary' &&
-    `
-    background-color: ${props.theme.button.secondary.bgColor};
-  `}
-
-  ${(props) =>
-    props.size === 'lg' &&
-    css`
-      font-size: 18px;
-      padding: 1rem 1.5rem;
-    `}
-  ${(props) =>
-    props.size === 'md' &&
-    css`
-      font-size: 16px;
-      padding: 0.75rem 1rem;
-    `}
-
-  ${(props) =>
-    props.active &&
-    css`
-      background-color: darken(${props.theme.button.primary.bgColor}, 10%);
-    `}
-
-  ${(props) =>
-    props.disabled &&
-    css`
-      background-color: #ccc;
-      cursor: not-allowed;
-      opacity: 0.7;
-    `}
+  &:disabled {
+    opacity: 0.65;
+  }
+  &:focus {
+    background-color: ${({ variant, theme }) =>
+      variant &&
+      theme.button[variant] &&
+      theme.button[variant].focus &&
+      theme.button[variant].focus.bgColor};
+    box-shadow: ${({ variant, theme }) =>
+      variant &&
+      theme.button[variant] &&
+      theme.button[variant].focus &&
+      theme.button[variant].focus.boxShadow};
+    border: transparent;
+    border: transparent;
+  }
+  &:hover {
+    background-color: ${({ variant, theme }) =>
+      variant && theme.button[variant] && theme.button[variant].hoverColor};
+  }
 `;
 
 export { StyledButton };

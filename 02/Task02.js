@@ -1,20 +1,10 @@
 import React from 'react';
-
+import { ThemeProvider } from 'styled-components';
+import theme from '../src/components/theme';
+import Button from '../src/components/Button/Button';
 import { Row, Col, Button as RBButton } from 'react-bootstrap';
-import { StyledButton } from '../src/components/Button/Button.styled';
 
 const Task02 = () => {
-  const theme = {
-    button: {
-      primary: {
-        bgColor: 'green',
-      },
-      secondary: {
-        bgColor: '#007bff',
-      },
-    },
-  };
-
   return (
     <Row>
       <Col>
@@ -23,12 +13,11 @@ const Task02 = () => {
         </RBButton>
       </Col>
       <Col>
-        <StyledButton theme={theme} variant="secondary" size="md" active>
-          Button!
-        </StyledButton>
-        <StyledButton theme={theme} variant="primary" size="md" disabled>
-          Disabled Button!
-        </StyledButton>
+        <ThemeProvider theme={theme}>
+          <Button variant="primary" size="large">
+            Button!
+          </Button>
+        </ThemeProvider>
       </Col>
     </Row>
   );

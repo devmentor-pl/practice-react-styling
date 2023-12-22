@@ -1,13 +1,12 @@
 import React from 'react';
-
-import { ThemeProvider } from 'styled-components';
 import { StyledButton } from './Button.styled';
 
 const Button = (props) => {
+  const { children, size, variant } = props;
   return (
-    <ThemeProvider theme={props.theme || {}}>
-      <StyledButton>{props.children}</StyledButton>
-    </ThemeProvider>
+    <StyledButton variant={variant} size={size}>
+      {children}
+    </StyledButton>
   );
 };
 
