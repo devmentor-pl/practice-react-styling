@@ -9,22 +9,22 @@ const theme = {
       color: '#fff',
       hoverBackgroundColor: '#0022D9',
       activeBackgroundColor: '#0022D9',
-      activeBorder: '5px solid #0069D9'
+      activeOutline: '3px solid #0099D9',
     },
     secondary: {
       backgroundColor: '#5585b5',
       color: '#fff',
       hoverBackgroundColor: '#5055c5',
       activeBackgroundColor: '#5055c5',
-      activeBorder: '5px solid #5585b5'
+      activeOutline: '3px solid #5585b5'
     },
     sizes: {
       lg: {
-        padding: '10px 20px',
+        padding: '8px 16px',
         fontSize: '20px',
       },
       sm: {
-        padding: '5px 10px',
+        padding: '6px 10px',
         fontSize: '16px',
       },
     },
@@ -32,8 +32,8 @@ const theme = {
 };
 
 const StyledButton = styled.button`
-  border-radius: 10px;
-  border: 5px solid transparent;
+  border-radius: 5px;
+  border: 3px solid transparent;
   margin: 0 5px;
   &:disabled {
     opacity: 0.5;
@@ -42,7 +42,6 @@ const StyledButton = styled.button`
   &:focus {
     outline: none;
   }
-  transition: 200ms;
   ${({ theme, variant }) =>
     variant === 'primary' &&
     css`
@@ -50,6 +49,7 @@ const StyledButton = styled.button`
       color: ${theme.button.primary.color};
       &:hover {
         background-color: ${theme.button.primary.hoverBackgroundColor};
+        transition: 300ms;
       }
     `}
     ${({ theme, variant, active }) =>
@@ -57,7 +57,8 @@ const StyledButton = styled.button`
     css`
       &:focus {
         background-color: ${theme.button.primary.activeBackgroundColor};
-        border: ${theme.button.primary.activeBorder};
+        outline: ${theme.button.primary.activeOutline};
+        transition: 100ms;
       }
     `}
   ${({ theme, variant }) =>
@@ -74,7 +75,7 @@ const StyledButton = styled.button`
     css`
       &:focus {
         background-color: ${theme.button.secondary.activeBackgroundColor};
-        border: ${theme.button.secondary.activeBorder};
+        outline: ${theme.button.secondary.activeOutline};
       }
     `}
 
