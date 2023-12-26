@@ -34,7 +34,7 @@ const theme = {
 const StyledButton = styled.button`
   border-radius: 5px;
   border: 3px solid transparent;
-  margin: 0 5px;
+  margin: 10px 5px;
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
