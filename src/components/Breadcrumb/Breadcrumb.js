@@ -2,9 +2,10 @@ import React from 'react';
 import { StyledBreadcrumb } from './Breadcrumb.styled';
 
 const Breadcrumb = (props) => {
+  const { children } = props;
   return (
     <nav>
-      <StyledBreadcrumb>{props.children}</StyledBreadcrumb>
+      <StyledBreadcrumb>{children}</StyledBreadcrumb>
     </nav>
   );
 };

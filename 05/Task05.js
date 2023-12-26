@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { ThemeProvider } from 'styled-components';
+import theme from '../src/components/theme';
 import { Row, Col, Card as RBCard, Button as RBButton } from 'react-bootstrap';
 import {
   Card,
@@ -7,20 +8,10 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  StyledButton,
+  Button,
 } from '../src/components/Card/index';
 
 const Task05 = () => {
-  const theme = {
-    button: {
-      primary: {
-        bgColor: '#008000',
-      },
-      secondary: {
-        bgColor: '#007bff',
-      },
-    },
-  };
   return (
     <Row>
       <Col>
@@ -45,9 +36,11 @@ const Task05 = () => {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </CardText>
-            <StyledButton theme={theme} variant="secondary">
-              Go somewhere
-            </StyledButton>
+            <ThemeProvider theme={theme}>
+              <Button variant="primary" size="medium">
+                Go somewhere
+              </Button>
+            </ThemeProvider>
           </CardBody>
         </Card>
       </Col>

@@ -4,7 +4,7 @@ const StyledButton = styled.button`
   padding: ${({ size, theme }) =>
     size &&
     `${theme.button[size].paddingVertical} ${theme.button[size].paddingHorizontal}`};
-  border: transparent;
+  border: 1px solid transparent;
   cursor: pointer;
   border-radius: ${({ size, theme }) =>
     size && theme.button[size].borderRadius};

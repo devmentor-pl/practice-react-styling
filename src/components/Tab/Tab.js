@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Tab = (props) => {
-  const { children } = props;
+  const { children, active } = props;
   return <>{children}</>;
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Row, Col, Tabs as RBTabs, Tab as RBTab } from 'react-bootstrap';
 import { Tab, Tabs } from '../src/components/Tab/index';
 
@@ -45,7 +44,7 @@ const Task04 = () => {
               Curae;{' '}
             </p>
           </Tab>
-          <Tab eventKey="profile" title="Profile">
+          <Tab eventKey="profile" title="Profile" active="activeTab">
             <p>
               Donec dignissim ultricies felis, eu dictum eros congue in. In
               gravida lobortis libero nec tempus. Cras rutrum nisl ut leo
@@ -53,7 +52,7 @@ const Task04 = () => {
               tincidunt eu lacus.
             </p>
           </Tab>
-          <Tab eventKey="contact" title="Contact" disabled="disabled">
+          <Tab eventKey="contact" title="Contact" disabled={true}>
             <p>
               Vivamus metus nulla, fermentum eget placerat vitae, mollis
               interdum elit. Pellentesque arcu augue, vulputate ut porttitor ut,

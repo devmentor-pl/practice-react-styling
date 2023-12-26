@@ -16,7 +16,7 @@ const StyledTab = styled.a`
     text-decoration: none;
     border-bottom: none;
   }
-  &[disabled]:hover {
+  &:not([disabled]):not(&[aria-selected='true']):hover {
     color: #6c757d;
     text-decoration: none;
   }
@@ -25,7 +25,7 @@ const StyledTab = styled.a`
     css`
       background-color: #fff;
       border-color: #dee2e6 #dee2e6 #fff;
-      color: #495057;
+      color: #6c757d;
     `}
   ${(props) =>
     props.disabled &&
