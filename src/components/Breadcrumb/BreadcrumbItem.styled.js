@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledBreadItem = styled.li`
+list-style-type: none;
   &:nth-child(1) {
     &:before {
       content: none;
