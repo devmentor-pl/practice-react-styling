@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Alert from './../src/components/Alert';
+import Alert from './../src/components/Alert/index';
 import { Row, Col, Alert as RBAlert } from 'react-bootstrap';
 
 const Task01 = () => {
