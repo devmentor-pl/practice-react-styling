@@ -23,7 +23,7 @@ const Task04 = () => {
                     <Tab label="Home">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec ligula faucibus rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; </p>
                     </Tab>
-                    <Tab label="Profile">
+                    <Tab label="Profile" active>
                         <p>Donec dignissim ultricies felis, eu dictum eros congue in. In gravida lobortis libero nec tempus. Cras rutrum nisl ut leo volutpat rhoncus. Nulla massa nulla, viverra hendrerit laoreet at, tincidunt eu lacus.</p>
                     </Tab>
                     <Tab label="Contact" disabled>
