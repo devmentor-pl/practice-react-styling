@@ -31,10 +31,19 @@ const TabButton = styled.button`
         background-color: #fff;
         border-color: #dee2e6 #dee2e6 #fff;
     }
+    
+    &:not(.active) {
+        color: #007bff;
+    }
 
     &:not(.active):hover {
         border0color: transparent;
         color: #0056b3;
+    }
+
+    &.disabled {
+        color: #6c757d;
+        cursor: default;
     }
 `;
 

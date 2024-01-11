@@ -1,11 +1,18 @@
 import React from "react";
 import { TabButton } from "./Tabs.styled";
 
-const Tab = ({ label, active, children, onClick }) => {
+const Tab = ({ label, active, disabled, children, onClick }) => {
+    const handleClick = () => {
+        if (!disabled) {
+            onClick(label);
+        }
+    };
+
     return (
         <TabButton
-            onClick={() => onClick(label)}
-            className={active ? "active" : ""}
+            onClick={handleClick}
+            className={`${active ? "active" : ""} ${disabled ? "disabled" : ""}`}
+            disabled={disabled}
         >
             {label}
         </TabButton>
